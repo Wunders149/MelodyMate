@@ -5,7 +5,7 @@ document.getElementById('lyricsForm').addEventListener('submit', function(e) {
     let title = document.getElementById('title').value.trim();
 
     if (artist === '' || title === '') {
-        alert('Veuillez remplir les deux champs');
+        alert('Please fill the field!');
         return;
     }
 
@@ -15,11 +15,11 @@ document.getElementById('lyricsForm').addEventListener('submit', function(e) {
             if (data.lyrics) {
                 document.getElementById('lyrics').innerText = data.lyrics;
             } else {
-                document.getElementById('lyrics').innerText = 'Paroles non trouvées';
+                document.getElementById('lyrics').innerText = 'Lyrics not found';
             }
         })
         .catch(error => {
-            document.getElementById('lyrics').innerText = 'Une erreur est survenue. Veuillez réessayer plus tard.';
+            document.getElementById('lyrics').innerText = 'An Error occured! Please try again later';
             console.error('Erreur:', error);
         });
 });
