@@ -10,5 +10,5 @@ function chargerPage(url, conteneurId) {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    chargerPage('navbar.html', 'conteneur');
+    chargerPage('../pages/navbar.html', 'conteneur');
 });
