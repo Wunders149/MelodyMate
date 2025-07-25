@@ -1,45 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Lyrics - MelodyMate</title>
-  <link rel="stylesheet" href="../../dist/output.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lyrics - MelodyMate</title>
+    <link rel="stylesheet" href="../../dist/output.css">
 </head>
-<body class="bg-gradient-to-br from-indigo-50 to-blue-100 min-h-screen flex items-center justify-center px-4">
-  <div class="bg-white shadow-2xl rounded-2xl p-8 w-full max-w-2xl">
-    
-    <!-- Logo & Title -->
-    <div class="text-center mb-8">
-      <h1 class="text-3xl font-bold text-indigo-600">🎵 MelodyMate</h1>
-      <p class="text-gray-600 mt-2 italic">Find your tune, feel the words</p>
+<body>
+    <div class="container mx-auto p-4 bg-gray-300 rounded-lg shadow-lg text-center">
+        <h1 class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">MelodyMate</h1>
+        <form class="max-w-sm mx-auto" id="lyricsForm">
+            <div class="mb-5">
+                <label for="artist" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Artist name</label>
+                <input type="text" id="artist" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Gazo" required />
+            </div>
+            <div class="mb-5">
+                <label for="title" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Song title</label>
+                <input type="text" id="title" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Die" required />
+            </div>
+            <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button>
+        </form>
+        <div id="lyrics" class="mt-6 p-4 bg-gray-400 rounded-lg shadow-inner whitespace-pre-wrap text-left"></div>
     </div>
-
-    <!-- Form -->
-    <form id="lyricsForm" class="space-y-6">
-      <div>
-        <label for="artist" class="block mb-2 text-sm font-medium text-gray-700">🎤 Artist Name</label>
-        <input type="text" id="artist" placeholder="Gazo" required
-          class="w-full px-4 py-2 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400 transition"/>
-      </div>
-      <div>
-        <label for="title" class="block mb-2 text-sm font-medium text-gray-700">🎶 Song Title</label>
-        <input type="text" id="title" placeholder="Die" required
-          class="w-full px-4 py-2 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400 transition"/>
-      </div>
-      <button type="submit"
-        class="w-full bg-indigo-600 text-white py-2 rounded-xl font-semibold hover:bg-indigo-700 transition">
-        Search Lyrics
-      </button>
-    </form>
-
-    <!-- Lyrics Display -->
-    <div id="lyrics"
-      class="mt-10 bg-gray-100 border-l-4 border-indigo-500 p-6 rounded-xl shadow-inner whitespace-pre-wrap text-gray-800 font-serif text-lg leading-relaxed">
-      <!-- Lyrics will appear here -->
-    </div>
-
-  </div>
-  <script src="../scripts/app.js"></script>
+    <script src="../scripts/app.js"></script>       
 </body>
 </html>
