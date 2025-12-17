@@ -2,8 +2,10 @@
   "name": "melodymate",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+
   "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
     "build:css": "npx tailwindcss -i ./src/styles/tailwind.css -o ./dist/output.css"
   },
   "keywords": [],
@@ -12,6 +14,7 @@
   "devDependencies": {
     "autoprefixer": "^10.4.20",
     "postcss": "^8.4.40",
-    "tailwindcss": "^3.4.7"
+    "tailwindcss": "^3.4.7",
+    "parcel": "^2.11.0"
   }
 }
