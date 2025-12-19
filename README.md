@@ -1,31 +1,30 @@
-# MelodyMate 🎵
+# MelodyMate Karaoke 🎤
 
-A stunning, modern web application for discovering song lyrics with an amazing user experience.
+An interactive karaoke experience with synchronized lyrics and instrumental tracks.
 
 ## ✨ Features
 
-### 🎨 Modern UI/UX
-- **Gradient Backgrounds**: Beautiful purple-to-pink gradients throughout
-- **Glass Morphism**: Modern glass-like effects on navigation
-- **Smooth Animations**: Fade-in, float, and hover animations
-- **Responsive Design**: Perfect on all devices
+### 🎤 **Interactive Karaoke**
+- **Synchronized Lyrics**: Lyrics highlight in real-time as the music plays
+- **Instrumental Tracks**: Professional backing music for sing-along
+- **Click to Jump**: Click any lyric line to jump to that part of the song
+- **Audio Controls**: Play, pause, volume, and progress controls
 
-### 🔍 Enhanced Search
-- **Smart Search Form**: Beautiful input fields with icons
-- **Loading States**: Animated loading spinners during search
-- **Popular Searches**: Quick-access buttons for trending songs
-- **Error Handling**: User-friendly notifications
+### 🎵 **Song Library**
+- **Curated Collection**: Hand-picked songs with timed lyrics
+- **Multiple Genres**: Traditional songs, classics, and popular tunes
+- **Easy Selection**: Visual song cards for quick browsing
 
-### 📱 Interactive Elements
-- **Floating Music Notes**: Animated musical elements
-- **Copy to Clipboard**: Easy lyrics copying
-- **Scroll to Top**: Floating action button
-- **Hover Effects**: Interactive button animations
+### 🎮 **Interactive Controls**
+- **Keyboard Shortcuts**: Space bar for play/pause, arrow keys for seeking
+- **Progress Bar**: Visual progress with clickable seeking
+- **Volume Control**: Adjustable audio levels
+- **Responsive Design**: Works perfectly on all devices
 
-### 🎯 User Experience
-- **Instant Feedback**: Toast notifications for all actions
-- **Smooth Transitions**: All interactions are animated
-- **Accessibility**: Proper ARIA labels and keyboard navigation
+### 🎨 **Modern UI/UX**
+- **Gradient Themes**: Beautiful purple-to-pink gradients
+- **Smooth Animations**: Floating elements and transitions
+- **Glass Morphism**: Modern translucent effects
 - **Mobile-First**: Optimized for touch devices
 
 ## 🚀 Getting Started
@@ -50,11 +49,26 @@ A stunning, modern web application for discovering song lyrics with an amazing u
    http://localhost:1234
    ```
 
+## 🎤 How to Use
+
+1. **Choose a Song**: Browse the available karaoke songs
+2. **Start Singing**: Click on a song card to load it
+3. **Follow Lyrics**: Watch as lyrics highlight in real-time
+4. **Control Playback**: Use play/pause, volume, and progress controls
+5. **Jump Around**: Click any lyric line to jump to that section
+
+## 🎹 Controls
+
+- **Space Bar**: Play/Pause
+- **Left/Right Arrows**: Seek backward/forward 5 seconds
+- **Mouse**: Click progress bar to seek, drag volume slider
+- **Click Lyrics**: Jump to that part of the song
+
 ## 📁 Project Structure
 
 ```
 MelodyMate/
-├── index.html              # Landing page with hero section
+├── index.html              # Karaoke landing page
 ├── package.json            # Dependencies and scripts
 ├── tailwind.config.js      # Tailwind configuration
 ├── postcss.config.js       # PostCSS configuration
@@ -64,32 +78,30 @@ MelodyMate/
     ├── images/            # Logo and images
     ├── pages/             # HTML pages
     │   ├── navbar.html    # Navigation component
-    │   ├── search.html    # Main search interface
-    │   └── lyrics.html    # Alternative search page
+    │   ├── search.html    # Main karaoke interface
+    │   └── lyrics.html    # Alternative karaoke page
     ├── scripts/           # JavaScript functionality
     │   ├── scripts.js     # Navbar loading
-    │   ├── app.js         # Basic lyrics search
-    │   └── search-enhancements.js # Advanced features
+    │   ├── karaoke-engine.js # Main karaoke logic
+    │   └── karaoke-data.js # Song data and lyrics
     └── styles/
         └── tailwind.css   # Custom styles and animations
 ```
 
-## 🎵 How to Use
+## 🎵 Available Songs
 
-1. **Visit the Homepage**: See the beautiful landing page
-2. **Navigate to Search**: Click "Start Exploring" or go to search page
-3. **Enter Song Details**: Type artist name and song title
-4. **Search**: Click the search button or use popular searches
-5. **View Lyrics**: Read, copy, and enjoy the lyrics!
+- **Happy Birthday** - Traditional
+- **Twinkle Twinkle Little Star** - Traditional
+- **Amazing Grace** - Traditional
 
 ## 🛠️ Technologies Used
 
-- **HTML5**: Semantic markup
+- **HTML5**: Semantic markup with audio elements
 - **Tailwind CSS**: Utility-first styling
-- **JavaScript**: Interactive functionality
+- **JavaScript**: Interactive karaoke engine
 - **Parcel**: Build tool and dev server
 - **Font Awesome**: Beautiful icons
-- **Lyrics.ovh API**: Song lyrics data
+- **Web Audio API**: Audio playback and controls
 
 ## 🎨 Design Highlights
 
@@ -104,6 +116,34 @@ MelodyMate/
 - **Mobile Navigation**: Collapsible menu for small screens
 - **Flexible Layouts**: Grid and flexbox for all screen sizes
 - **Touch-Friendly**: Large buttons and touch targets
-- **Optimized Images**: Proper sizing and lazy loading
+- **Adaptive Controls**: Optimized for different screen sizes
 
-Enjoy exploring music like never before with MelodyMate! 🎶✨
+## 🔧 Customization
+
+### Adding New Songs
+
+1. Add song data to `karaoke-data.js`:
+```javascript
+"new-song": {
+  title: "New Song Title",
+  artist: "Artist Name",
+  instrumental: "path/to/audio.mp3",
+  duration: 180,
+  lyrics: [
+    { time: 0, text: "First line of lyrics" },
+    { time: 5, text: "Second line of lyrics" },
+    // ... more lyrics with timestamps
+  ]
+}
+```
+
+2. Ensure audio file is accessible
+3. Test timing with the karaoke engine
+
+### Styling Customization
+
+- Modify `tailwind.config.js` for color schemes
+- Update `src/styles/tailwind.css` for custom animations
+- Adjust gradients and effects in component classes
+
+Enjoy your karaoke experience with MelodyMate! 🎶✨🎤
