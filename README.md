@@ -1,24 +1,31 @@
 # MelodyMate Karaoke 🎤
 
-An interactive karaoke experience with synchronized lyrics and instrumental tracks.
+An interactive karaoke experience with timestamped lyrics from LRCLIB and PoYo APIs.
 
 ## ✨ Features
 
-### 🎤 **Interactive Karaoke**
-- **Synchronized Lyrics**: Lyrics highlight in real-time as the music plays
-- **Instrumental Tracks**: Professional backing music for sing-along
-- **Click to Jump**: Click any lyric line to jump to that part of the song
+### 🎤 **Dynamic Song Search**
+- **API-Powered Search**: Search millions of songs using LRCLIB API
+- **Timestamped Lyrics**: Automatically synchronized lyrics with precise timing
+- **Dual API Support**: LRCLIB primary + PoYo API as fallback
+- **Real-time Results**: Instant search results with song details
+
+### 🎵 **Interactive Karaoke**
+- **Synchronized Lyrics**: Lyrics highlight in real-time as music plays
 - **Audio Controls**: Play, pause, volume, and progress controls
+- **Click to Jump**: Click any lyric line to jump to that part
+- **Keyboard Shortcuts**: Space bar (play/pause), arrow keys (seek)
 
-### 🎵 **Song Library**
-- **Curated Collection**: Hand-picked songs with timed lyrics
-- **Multiple Genres**: Traditional songs, classics, and popular tunes
-- **Easy Selection**: Visual song cards for quick browsing
+### 🎼 **Song Library**
+- **Millions of Songs**: Access to vast music catalog
+- **Multiple Sources**: LRCLIB + PoYo API integration
+- **Fallback System**: Automatic fallback between APIs
+- **Demo Songs**: Traditional songs available without search
 
-### 🎮 **Interactive Controls**
-- **Keyboard Shortcuts**: Space bar for play/pause, arrow keys for seeking
+### 🎮 **Enhanced Controls**
 - **Progress Bar**: Visual progress with clickable seeking
 - **Volume Control**: Adjustable audio levels
+- **Time Display**: Current time and total duration
 - **Responsive Design**: Works perfectly on all devices
 
 ### 🎨 **Modern UI/UX**
@@ -51,11 +58,11 @@ An interactive karaoke experience with synchronized lyrics and instrumental trac
 
 ## 🎤 How to Use
 
-1. **Choose a Song**: Browse the available karaoke songs
-2. **Start Singing**: Click on a song card to load it
-3. **Follow Lyrics**: Watch as lyrics highlight in real-time
-4. **Control Playback**: Use play/pause, volume, and progress controls
-5. **Jump Around**: Click any lyric line to jump to that section
+1. **Search for Songs**: Enter song title and artist name (optional)
+2. **Browse Results**: Click on search results to load songs
+3. **Start Singing**: Use play button to begin karaoke
+4. **Follow Lyrics**: Watch as lyrics highlight in real-time
+5. **Control Playback**: Use keyboard shortcuts or on-screen controls
 
 ## 🎹 Controls
 
@@ -82,26 +89,38 @@ MelodyMate/
     │   └── lyrics.html    # Alternative karaoke page
     ├── scripts/           # JavaScript functionality
     │   ├── scripts.js     # Navbar loading
-    │   ├── karaoke-engine.js # Main karaoke logic
-    │   └── karaoke-data.js # Song data and lyrics
+    │   ├── karaoke-engine.js # Main karaoke logic + API integration
+    │   └── karaoke-data.js # API classes and demo songs
     └── styles/
         └── tailwind.css   # Custom styles and animations
 ```
 
-## 🎵 Available Songs
+## 🔗 APIs Used
 
-- **Happy Birthday** - Traditional
-- **Twinkle Twinkle Little Star** - Traditional
-- **Amazing Grace** - Traditional
+### LRCLIB API
+- **Base URL**: `https://lrclib.net/api`
+- **Features**: Timestamped lyrics, song search, metadata
+- **Format**: `[mm:ss.xx]lyrics` timestamp format
+
+### PoYo API
+- **Base URL**: `https://api.poyo.ai`
+- **Features**: Alternative timestamped lyrics source
+- **Usage**: Fallback when LRCLIB doesn't have lyrics
+
+## 🎵 Demo Songs
+
+- **Happy Birthday** - Traditional (pre-loaded)
+- **Search any song** - Millions available via APIs
 
 ## 🛠️ Technologies Used
 
 - **HTML5**: Semantic markup with audio elements
 - **Tailwind CSS**: Utility-first styling
-- **JavaScript**: Interactive karaoke engine
+- **JavaScript**: Interactive karaoke engine with API integration
 - **Parcel**: Build tool and dev server
 - **Font Awesome**: Beautiful icons
-- **Web Audio API**: Audio playback and controls
+- **Web Audio API**: Audio playback and demo sounds
+- **Fetch API**: RESTful API communication
 
 ## 🎨 Design Highlights
 
@@ -118,32 +137,25 @@ MelodyMate/
 - **Touch-Friendly**: Large buttons and touch targets
 - **Adaptive Controls**: Optimized for different screen sizes
 
-## 🔧 Customization
+## 🔧 API Integration Details
 
-### Adding New Songs
+### Search Flow
+1. User enters song title/artist
+2. LRCLIB API search returns matching songs
+3. User selects song from results
+4. App fetches timestamped lyrics
+5. Fallback to PoYo API if needed
+6. Lyrics parsed and synchronized
 
-1. Add song data to `karaoke-data.js`:
-```javascript
-"new-song": {
-  title: "New Song Title",
-  artist: "Artist Name",
-  instrumental: "path/to/audio.mp3",
-  duration: 180,
-  lyrics: [
-    { time: 0, text: "First line of lyrics" },
-    { time: 5, text: "Second line of lyrics" },
-    // ... more lyrics with timestamps
-  ]
-}
-```
+### Lyrics Format
+- **LRCLIB**: `[mm:ss.xx]Lyrics text here`
+- **PoYo**: `{time: seconds, text: "lyrics"}`
+- **Parsed to**: `[{time: seconds, text: "lyrics"}, ...]`
 
-2. Ensure audio file is accessible
-3. Test timing with the karaoke engine
-
-### Styling Customization
-
-- Modify `tailwind.config.js` for color schemes
-- Update `src/styles/tailwind.css` for custom animations
-- Adjust gradients and effects in component classes
+### Error Handling
+- Network failures gracefully handled
+- API fallbacks for reliability
+- User-friendly error messages
+- Demo songs always available
 
 Enjoy your karaoke experience with MelodyMate! 🎶✨🎤

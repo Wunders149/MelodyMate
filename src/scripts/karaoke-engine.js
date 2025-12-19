@@ -314,22 +314,41 @@ class KaraokeEngine {
   }
 }
 
-// Initialize karaoke when DOM is loaded
-document.addEventListener('DOMContentLoaded', function() {
+// Karaoke Interface with API Integration
+document.addEventListener('DOMContentLoaded', async function() {
+  // Import the API
+  const { karaokeAPI, demoSongs } = await import('./karaoke-data.js');
+
   // Create karaoke interface elements
   const karaokeContainer = document.createElement('div');
   karaokeContainer.id = 'karaokeContainer';
-  karaokeContainer.className = 'max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 hidden';
+  karaokeContainer.className = 'max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-16';
 
   karaokeContainer.innerHTML = `
     <div class="bg-white rounded-2xl shadow-xl p-8">
       <div class="text-center mb-6">
-        <h2 id="songTitle" class="text-2xl font-bold text-gray-900 mb-2">Select a Song to Start Karaoke</h2>
-        <p class="text-gray-600">Click on lyrics to jump to that part</p>
+        <h2 id="songTitle" class="text-2xl font-bold text-gray-900 mb-2">Search for a Song to Start Karaoke</h2>
+        <p class="text-gray-600">Find any song with synchronized lyrics</p>
+      </div>
+
+      <!-- Search Form -->
+      <div class="bg-gray-50 rounded-xl p-6 mb-6">
+        <div class="flex flex-col md:flex-row gap-4 mb-4">
+          <div class="flex-1">
+            <input type="text" id="songSearch" placeholder="Enter song title..." class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-purple-500 focus:ring-4 focus:ring-purple-200 transition-all duration-200">
+          </div>
+          <div class="flex-1">
+            <input type="text" id="artistSearch" placeholder="Enter artist name (optional)..." class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-purple-500 focus:ring-4 focus:ring-purple-200 transition-all duration-200">
+          </div>
+          <button id="searchBtn" class="px-6 py-3 bg-gradient-to-r from-pink-500 to-purple-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+            <i class="fas fa-search mr-2"></i>Search
+          </button>
+        </div>
+        <div id="searchResults" class="hidden space-y-2 max-h-60 overflow-y-auto"></div>
       </div>
 
       <!-- Audio Controls -->
-      <div class="bg-gray-50 rounded-xl p-6 mb-6">
+      <div id="audioControls" class="bg-gray-50 rounded-xl p-6 mb-6 hidden">
         <div class="flex items-center justify-center space-x-4 mb-4">
           <button id="playPauseBtn" class="w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-600 text-white rounded-full shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300 flex items-center justify-center">
             <i class="fas fa-play"></i>
@@ -348,27 +367,27 @@ document.addEventListener('DOMContentLoaded', function() {
       </div>
 
       <!-- Lyrics Display -->
-      <div id="lyricsDisplay" class="bg-gradient-to-b from-purple-50 to-pink-50 rounded-xl p-8 min-h-96 flex flex-col justify-center space-y-2">
+      <div id="lyricsDisplay" class="bg-gradient-to-b from-purple-50 to-pink-50 rounded-xl p-8 min-h-96 flex flex-col justify-center space-y-2 hidden">
         <div class="text-center text-gray-500">
           <i class="fas fa-music text-4xl mb-4"></i>
-          <p>Choose a song from the list below to start your karaoke session!</p>
+          <p>Search for a song above to start your karaoke session!</p>
         </div>
       </div>
 
-      <!-- Song Selection -->
+      <!-- Demo Songs -->
       <div class="mt-8">
-        <h3 class="text-lg font-semibold text-gray-900 mb-4">Available Songs</h3>
-        <div id="songList" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          <!-- Songs will be populated here -->
+        <h3 class="text-lg font-semibold text-gray-900 mb-4">Demo Songs (No Search Required)</h3>
+        <div id="demoSongs" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <!-- Demo songs will be populated here -->
         </div>
       </div>
     </div>
   `;
 
-  // Insert karaoke container after the search form
-  const searchForm = document.querySelector('form');
-  if (searchForm) {
-    searchForm.parentNode.insertBefore(karaokeContainer, searchForm.nextSibling);
+  // Insert karaoke container after the instructions
+  const instructions = document.querySelector('.bg-white.rounded-2xl.shadow-xl.p-6');
+  if (instructions) {
+    instructions.parentNode.insertBefore(karaokeContainer, instructions.nextSibling);
   }
 
   // Initialize karaoke engine
@@ -382,34 +401,175 @@ document.addEventListener('DOMContentLoaded', function() {
 
   const karaoke = new KaraokeEngine(audio, lyricsContainer, progressBar, controls);
 
-  // Load and display available songs
-  import('./karaoke-data.js').then(({ karaokeSongs }) => {
-    const songList = document.getElementById('songList');
+  // Load demo songs
+  const demoSongsContainer = document.getElementById('demoSongs');
+  Object.entries(demoSongs).forEach(([id, song]) => {
+    const songCard = document.createElement('div');
+    songCard.className = 'bg-gradient-to-r from-purple-100 to-pink-100 p-4 rounded-lg cursor-pointer hover:shadow-lg transition-all duration-300 transform hover:scale-105';
+    songCard.innerHTML = `
+      <div class="flex items-center space-x-3">
+        <div class="w-10 h-10 bg-gradient-to-r from-pink-500 to-purple-600 rounded-lg flex items-center justify-center">
+          <i class="fas fa-music text-white"></i>
+        </div>
+        <div>
+          <h4 class="font-semibold text-gray-900">${song.title}</h4>
+          <p class="text-sm text-gray-600">${song.artist}</p>
+        </div>
+      </div>
+    `;
 
-    Object.entries(karaokeSongs).forEach(([id, song]) => {
-      const songCard = document.createElement('div');
-      songCard.className = 'bg-gradient-to-r from-purple-100 to-pink-100 p-4 rounded-lg cursor-pointer hover:shadow-lg transition-all duration-300 transform hover:scale-105';
-      songCard.innerHTML = `
-        <div class="flex items-center space-x-3">
-          <div class="w-10 h-10 bg-gradient-to-r from-pink-500 to-purple-600 rounded-lg flex items-center justify-center">
-            <i class="fas fa-music text-white"></i>
+    songCard.addEventListener('click', () => {
+      karaoke.loadSong(song);
+      karaokeContainer.classList.remove('hidden');
+      document.getElementById('audioControls').classList.remove('hidden');
+      lyricsContainer.classList.remove('hidden');
+      karaokeContainer.scrollIntoView({ behavior: 'smooth' });
+    });
+
+    demoSongsContainer.appendChild(songCard);
+  });
+
+  // Search functionality
+  const searchBtn = document.getElementById('searchBtn');
+  const songSearch = document.getElementById('songSearch');
+  const artistSearch = document.getElementById('artistSearch');
+  const searchResults = document.getElementById('searchResults');
+
+  searchBtn.addEventListener('click', async () => {
+    const songQuery = songSearch.value.trim();
+    const artistQuery = artistSearch.value.trim();
+
+    if (!songQuery) {
+      showNotification('Please enter a song title', 'error');
+      return;
+    }
+
+    searchBtn.disabled = true;
+    searchBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Searching...';
+
+    try {
+      const results = await karaokeAPI.searchSongs(songQuery, artistQuery);
+
+      if (results.length === 0) {
+        searchResults.innerHTML = '<p class="text-gray-500 text-center py-4">No songs found. Try different search terms.</p>';
+        searchResults.classList.remove('hidden');
+        return;
+      }
+
+      displaySearchResults(results);
+      searchResults.classList.remove('hidden');
+    } catch (error) {
+      console.error('Search error:', error);
+      showNotification('Search failed. Please try again.', 'error');
+    } finally {
+      searchBtn.disabled = false;
+      searchBtn.innerHTML = '<i class="fas fa-search mr-2"></i>Search';
+    }
+  });
+
+  // Allow Enter key to search
+  [songSearch, artistSearch].forEach(input => {
+    input.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') {
+        searchBtn.click();
+      }
+    });
+  });
+
+  function displaySearchResults(results) {
+    searchResults.innerHTML = '';
+
+    results.forEach(song => {
+      const resultItem = document.createElement('div');
+      resultItem.className = 'bg-white p-4 rounded-lg border border-gray-200 hover:border-purple-300 cursor-pointer transition-all duration-200 hover:shadow-md';
+      resultItem.innerHTML = `
+        <div class="flex justify-between items-start">
+          <div class="flex-1">
+            <h4 class="font-semibold text-gray-900">${song.name}</h4>
+            <p class="text-sm text-gray-600">by ${song.artistName}</p>
+            ${song.albumName ? `<p class="text-xs text-gray-500">Album: ${song.albumName}</p>` : ''}
           </div>
-          <div>
-            <h4 class="font-semibold text-gray-900">${song.title}</h4>
-            <p class="text-sm text-gray-600">${song.artist}</p>
+          <div class="text-right">
+            <span class="text-xs text-gray-500">${formatDuration(song.duration)}</span>
           </div>
         </div>
       `;
 
-      songCard.addEventListener('click', () => {
-        karaoke.loadSong(song);
-        karaokeContainer.classList.remove('hidden');
-        karaokeContainer.scrollIntoView({ behavior: 'smooth' });
+      resultItem.addEventListener('click', async () => {
+        resultItem.innerHTML = '<div class="text-center py-4"><i class="fas fa-spinner fa-spin mr-2"></i>Loading lyrics...</div>';
+
+        try {
+          const songData = await karaokeAPI.searchAndGetSong(song.name, song.artistName);
+
+          if (songData) {
+            karaoke.loadSong(songData);
+            karaokeContainer.classList.remove('hidden');
+            document.getElementById('audioControls').classList.remove('hidden');
+            lyricsContainer.classList.remove('hidden');
+            karaokeContainer.scrollIntoView({ behavior: 'smooth' });
+            showNotification(`Loaded "${songData.title}" by ${songData.artist}`, 'success');
+          } else {
+            showNotification('Lyrics not available for this song', 'error');
+            resultItem.innerHTML = '<div class="text-center py-4 text-red-500"><i class="fas fa-exclamation-triangle mr-2"></i>Lyrics not found</div>';
+          }
+        } catch (error) {
+          console.error('Load song error:', error);
+          showNotification('Failed to load song', 'error');
+          resultItem.innerHTML = '<div class="text-center py-4 text-red-500"><i class="fas fa-exclamation-triangle mr-2"></i>Failed to load</div>';
+        }
       });
 
-      songList.appendChild(songCard);
+      searchResults.appendChild(resultItem);
     });
-  });
+  }
+
+  function formatDuration(seconds) {
+    const mins = Math.floor(seconds / 60);
+    const secs = Math.floor(seconds % 60);
+    return `${mins}:${secs.toString().padStart(2, '0')}`;
+  }
+
+  // Notification system
+  function showNotification(message, type = 'info') {
+    // Remove existing notifications
+    const existingNotifications = document.querySelectorAll('.notification');
+    existingNotifications.forEach(notification => notification.remove());
+
+    // Create notification
+    const notification = document.createElement('div');
+    notification.className = `notification fixed top-4 right-4 z-50 px-6 py-3 rounded-lg shadow-lg transform translate-x-full transition-transform duration-300 ${
+      type === 'success' ? 'bg-green-500 text-white' :
+      type === 'error' ? 'bg-red-500 text-white' :
+      'bg-blue-500 text-white'
+    }`;
+    notification.innerHTML = `
+      <div class="flex items-center">
+        <i class="fas ${
+          type === 'success' ? 'fa-check-circle' :
+          type === 'error' ? 'fa-exclamation-circle' :
+          'fa-info-circle'
+        } mr-2"></i>
+        ${message}
+      </div>
+    `;
+
+    document.body.appendChild(notification);
+
+    // Animate in
+    setTimeout(() => {
+      notification.classList.remove('translate-x-full');
+    }, 100);
+
+    // Auto remove
+    setTimeout(() => {
+      notification.classList.add('translate-x-full');
+      setTimeout(() => {
+        if (notification.parentNode) {
+          notification.parentNode.removeChild(notification);
+        }
+      }, 300);
+    }, 3000);
+  }
 
   // Add custom styles for sliders
   const style = document.createElement('style');
