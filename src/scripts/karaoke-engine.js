@@ -316,6 +316,10 @@ class KaraokeEngine {
 
 // Karaoke Interface with API Integration
 document.addEventListener('DOMContentLoaded', async function() {
+  // Import the navbar loader
+  const { loadNavBar } = await import('./navbar-loader.js');
+  loadNavBar();
+
   // Import the API
   const { karaokeAPI, demoSongs } = await import('./karaoke-data.js');
 
@@ -482,7 +486,8 @@ document.addEventListener('DOMContentLoaded', async function() {
     results.forEach(song => {
       const resultItem = document.createElement('div');
       resultItem.className = 'bg-white p-4 rounded-lg border border-gray-200 hover:border-purple-300 cursor-pointer transition-all duration-200 hover:shadow-md';
-      resultItem.innerHTML = `
+      
+      const originalContent = `
         <div class="flex justify-between items-start">
           <div class="flex-1">
             <h4 class="font-semibold text-gray-900">${song.name}</h4>
@@ -494,9 +499,11 @@ document.addEventListener('DOMContentLoaded', async function() {
           </div>
         </div>
       `;
+      resultItem.innerHTML = originalContent;
 
-      resultItem.addEventListener('click', async () => {
+      const clickHandler = async () => {
         resultItem.innerHTML = '<div class="text-center py-4"><i class="fas fa-spinner fa-spin mr-2"></i>Loading lyrics...</div>';
+        resultItem.removeEventListener('click', clickHandler); // Disable click during load
 
         try {
           const songData = await karaokeAPI.searchAndGetSong(song.name, song.artistName);
@@ -511,14 +518,23 @@ document.addEventListener('DOMContentLoaded', async function() {
           } else {
             showNotification('Lyrics not available for this song', 'error');
             resultItem.innerHTML = '<div class="text-center py-4 text-red-500"><i class="fas fa-exclamation-triangle mr-2"></i>Lyrics not found</div>';
+            setTimeout(() => {
+              resultItem.innerHTML = originalContent;
+              resultItem.addEventListener('click', clickHandler);
+            }, 2000);
           }
         } catch (error) {
           console.error('Load song error:', error);
           showNotification('Failed to load song', 'error');
           resultItem.innerHTML = '<div class="text-center py-4 text-red-500"><i class="fas fa-exclamation-triangle mr-2"></i>Failed to load</div>';
+          setTimeout(() => {
+            resultItem.innerHTML = originalContent;
+            resultItem.addEventListener('click', clickHandler);
+          }, 2000);
         }
-      });
+      };
 
+      resultItem.addEventListener('click', clickHandler);
       searchResults.appendChild(resultItem);
     });
   }
