@@ -104,10 +104,12 @@ class KaraokeEngine {
 
   renderLyrics() {
     this.lyricsContainer.innerHTML = '';
+    const lyricsContainer = document.createElement('div');
+    lyricsContainer.className = 'lyrics-container w-full';
 
     this.lyrics.forEach((lyric, index) => {
       const lyricElement = document.createElement('div');
-      lyricElement.className = 'lyric-line text-center py-2 px-4 rounded-lg transition-all duration-300 cursor-pointer hover:bg-purple-100';
+      lyricElement.className = 'lyric-line text-center py-3 px-4 rounded-lg cursor-pointer hover:bg-purple-100';
       lyricElement.textContent = lyric.text;
       lyricElement.dataset.index = index;
       lyricElement.dataset.time = lyric.time;
@@ -117,8 +119,10 @@ class KaraokeEngine {
         this.updateLyrics();
       });
 
-      this.lyricsContainer.appendChild(lyricElement);
+      lyricsContainer.appendChild(lyricElement);
     });
+
+    this.lyricsContainer.appendChild(lyricsContainer);
   }
 
   updateLyrics() {
@@ -137,21 +141,40 @@ class KaraokeEngine {
     }
 
     if (newIndex !== this.currentLyricIndex) {
+      const lyricsContainer = this.lyricsContainer.querySelector('.lyrics-container');
+      if (!lyricsContainer) return;
+
       // Remove previous active class
       if (this.currentLyricIndex >= 0) {
-        const prevElement = this.lyricsContainer.children[this.currentLyricIndex];
+        const prevElement = lyricsContainer.children[this.currentLyricIndex];
         if (prevElement) {
-          prevElement.classList.remove('active', 'bg-gradient-to-r', 'from-pink-400', 'to-purple-600', 'text-white', 'scale-105', 'shadow-lg');
+          prevElement.classList.remove('active');
         }
       }
 
       // Add active class to current line
       this.currentLyricIndex = newIndex;
       if (newIndex >= 0) {
-        const currentElement = this.lyricsContainer.children[newIndex];
+        const currentElement = lyricsContainer.children[newIndex];
         if (currentElement) {
-          currentElement.classList.add('active', 'bg-gradient-to-r', 'from-pink-400', 'to-purple-600', 'text-white', 'scale-105', 'shadow-lg');
-          currentElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          // Remove active from all other elements first
+          Array.from(lyricsContainer.children).forEach(child => {
+            child.classList.remove('active');
+          });
+
+          currentElement.classList.add('active');
+
+          // Scroll to keep the active element in view
+          const containerRect = lyricsContainer.getBoundingClientRect();
+          const elementRect = currentElement.getBoundingClientRect();
+          const offset = elementRect.top - containerRect.top;
+          const centerOffset = (containerRect.height - elementRect.height) / 2;
+          const scrollTop = lyricsContainer.scrollTop + offset - centerOffset;
+
+          lyricsContainer.scrollTo({
+            top: scrollTop,
+            behavior: 'smooth'
+          });
         }
       }
     }
@@ -299,9 +322,12 @@ class KaraokeEngine {
 
   resetLyrics() {
     this.currentLyricIndex = -1;
-    Array.from(this.lyricsContainer.children).forEach(child => {
-      child.classList.remove('active', 'bg-gradient-to-r', 'from-pink-400', 'to-purple-600', 'text-white', 'scale-105', 'shadow-lg');
-    });
+    const lyricsContainer = this.lyricsContainer.querySelector('.lyrics-container');
+    if (lyricsContainer) {
+      Array.from(lyricsContainer.children).forEach(child => {
+        child.classList.remove('active');
+      });
+    }
   }
 
   destroy() {

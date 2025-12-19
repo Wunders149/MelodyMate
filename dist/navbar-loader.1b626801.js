@@ -207,11 +207,11 @@
       });
     }
   }
-})({"liuWu":[function(require,module,exports,__globalThis) {
+})({"cf8Qw":[function(require,module,exports,__globalThis) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
-var HMR_SERVER_PORT = 62611;
+var HMR_SERVER_PORT = 1234;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "439701173a9199ea";
 var HMR_USE_SSE = false;
@@ -726,6 +726,6 @@ async function loadNavBar() {
     }
 }
 
-},{"./utils.js":"1X9hu","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}]},["liuWu"], null, "parcelRequireb585", {})
+},{"./utils.js":"1X9hu","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}]},["cf8Qw"], null, "parcelRequireb585", {})
 
 //# sourceMappingURL=navbar-loader.1b626801.js.map

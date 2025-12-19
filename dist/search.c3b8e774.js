@@ -207,11 +207,11 @@
       });
     }
   }
-})({"hEay6":[function(require,module,exports,__globalThis) {
+})({"ckN9Z":[function(require,module,exports,__globalThis) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
-var HMR_SERVER_PORT = 62611;
+var HMR_SERVER_PORT = 1234;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "439701173a9199ea";
 var HMR_USE_SSE = false;
@@ -802,9 +802,11 @@ class KaraokeEngine {
     }
     renderLyrics() {
         this.lyricsContainer.innerHTML = '';
+        const lyricsContainer = document.createElement('div');
+        lyricsContainer.className = 'lyrics-container w-full';
         this.lyrics.forEach((lyric, index)=>{
             const lyricElement = document.createElement('div');
-            lyricElement.className = 'lyric-line text-center py-2 px-4 rounded-lg transition-all duration-300 cursor-pointer hover:bg-purple-100';
+            lyricElement.className = 'lyric-line text-center py-3 px-4 rounded-lg cursor-pointer hover:bg-purple-100';
             lyricElement.textContent = lyric.text;
             lyricElement.dataset.index = index;
             lyricElement.dataset.time = lyric.time;
@@ -812,8 +814,9 @@ class KaraokeEngine {
                 this.audio.currentTime = lyric.time;
                 this.updateLyrics();
             });
-            this.lyricsContainer.appendChild(lyricElement);
+            lyricsContainer.appendChild(lyricElement);
         });
+        this.lyricsContainer.appendChild(lyricsContainer);
     }
     updateLyrics() {
         if (!this.lyrics.length) return;
@@ -825,20 +828,32 @@ class KaraokeEngine {
             else break;
         }
         if (newIndex !== this.currentLyricIndex) {
+            const lyricsContainer = this.lyricsContainer.querySelector('.lyrics-container');
+            if (!lyricsContainer) return;
             // Remove previous active class
             if (this.currentLyricIndex >= 0) {
-                const prevElement = this.lyricsContainer.children[this.currentLyricIndex];
-                if (prevElement) prevElement.classList.remove('active', 'bg-gradient-to-r', 'from-pink-400', 'to-purple-600', 'text-white', 'scale-105', 'shadow-lg');
+                const prevElement = lyricsContainer.children[this.currentLyricIndex];
+                if (prevElement) prevElement.classList.remove('active');
             }
             // Add active class to current line
             this.currentLyricIndex = newIndex;
             if (newIndex >= 0) {
-                const currentElement = this.lyricsContainer.children[newIndex];
+                const currentElement = lyricsContainer.children[newIndex];
                 if (currentElement) {
-                    currentElement.classList.add('active', 'bg-gradient-to-r', 'from-pink-400', 'to-purple-600', 'text-white', 'scale-105', 'shadow-lg');
-                    currentElement.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'center'
+                    // Remove active from all other elements first
+                    Array.from(lyricsContainer.children).forEach((child)=>{
+                        child.classList.remove('active');
+                    });
+                    currentElement.classList.add('active');
+                    // Scroll to keep the active element in view
+                    const containerRect = lyricsContainer.getBoundingClientRect();
+                    const elementRect = currentElement.getBoundingClientRect();
+                    const offset = elementRect.top - containerRect.top;
+                    const centerOffset = (containerRect.height - elementRect.height) / 2;
+                    const scrollTop = lyricsContainer.scrollTop + offset - centerOffset;
+                    lyricsContainer.scrollTo({
+                        top: scrollTop,
+                        behavior: 'smooth'
                     });
                 }
             }
@@ -982,8 +997,9 @@ class KaraokeEngine {
     }
     resetLyrics() {
         this.currentLyricIndex = -1;
-        Array.from(this.lyricsContainer.children).forEach((child)=>{
-            child.classList.remove('active', 'bg-gradient-to-r', 'from-pink-400', 'to-purple-600', 'text-white', 'scale-105', 'shadow-lg');
+        const lyricsContainer = this.lyricsContainer.querySelector('.lyrics-container');
+        if (lyricsContainer) Array.from(lyricsContainer.children).forEach((child)=>{
+            child.classList.remove('active');
         });
     }
     destroy() {
@@ -1239,6 +1255,6 @@ module.exports = import("./karaoke-data.7e6b71c1.js").then(()=>module.bundle.roo
 },{"3EPtN":"3EPtN"}],"hVWaJ":[function(require,module,exports,__globalThis) {
 module.exports = import("./utils.714af2d8.js").then(()=>module.bundle.root('1X9hu'));
 
-},{"1X9hu":"1X9hu"}]},["hEay6","cNjRp"], "cNjRp", "parcelRequireb585", {})
+},{"1X9hu":"1X9hu"}]},["ckN9Z","cNjRp"], "cNjRp", "parcelRequireb585", {})
 
 //# sourceMappingURL=search.c3b8e774.js.map
