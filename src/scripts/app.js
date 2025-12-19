@@ -1,7 +1,11 @@
 // Legacy app.js - functionality moved to search-enhancements.js
 // This file is kept for backward compatibility with lyrics.html page
+import { loadNavBar } from './navbar-loader.js';
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', async function() {
+    // Load the navbar
+    await loadNavBar();
+
     const form = document.getElementById('lyricsForm');
     if (!form) return; // Exit if form doesn't exist on this page
 

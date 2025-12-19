@@ -1,84 +1,92 @@
-<!DOCTYPE html><html lang=en><meta charset=UTF-8><meta name=viewport content="width=device-width, initial-scale=1.0"><title>MelodyMate - Find Your Tune, Feel The Words</title><link rel=stylesheet href=/MelodyMate.325cbd40.css><link href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css rel=stylesheet><body class="bg-gradient-to-br from-purple-900 min-h-screen to-indigo-900 via-blue-900">
-    <div id=navBar></div>
+<!DOCTYPE html><html lang="en"><head><script type="module" src="/utils.714af2d8.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MelodyMate - Find Your Tune, Feel The Words</title>
+    <link rel="stylesheet" href="/MelodyMate.4110e2cc.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 min-h-screen">
+    <div id="navBar"></div>
 
-    
-    <div class="overflow-hidden relative">
-        <div class="absolute bg-black bg-opacity-50 inset-0"></div>
-        <div class="lg:pt-32 lg:px-8 max-w-7xl mx-auto pb-16 pt-20 px-4 relative sm:px-6 text-center z-10">
-            <div class=animate-fade-in-up>
-                <h1 class="font-extrabold lg:text-7xl mb-6 sm:text-6xl text-4xl text-white">
-                    <span class="bg-clip-text bg-gradient-to-r from-pink-400 text-transparent to-purple-600">
+    <!-- Hero Section -->
+    <div class="relative overflow-hidden">
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16 text-center lg:pt-32">
+            <div class="animate-fade-in-up">
+                <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-white mb-6">
+                    <span class="bg-gradient-to-r from-pink-400 to-purple-600 bg-clip-text text-transparent">
                         MelodyMate
                     </span>
                 </h1>
-                <p class="lg:text-3xl max-w-3xl mb-8 mx-auto sm:text-2xl text-gray-300 text-xl">
+                <p class="text-xl sm:text-2xl lg:text-3xl text-gray-300 mb-8 max-w-3xl mx-auto">
                     Experience the ultimate karaoke adventure with synchronized lyrics and instrumental tracks
                 </p>
-                <div class="flex flex-col gap-4 items-center justify-center sm:flex-row">
-                    <a href=/src/pages/search.html class="bg-gradient-to-r duration-300 font-semibold from-pink-500 group hover:scale-105 hover:shadow-xl inline-flex items-center px-8 py-4 relative rounded-full shadow-lg text-white to-purple-600 transform transition-all">
-                        <i class="fa-microphone fas mr-2"></i>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <a href="/src/pages/search.html" class="group relative inline-flex items-center px-8 py-4 bg-gradient-to-r from-pink-500 to-purple-600 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+                        <i class="fas fa-microphone mr-2"></i>
                         Start Karaoke
-                        <div class="absolute bg-gradient-to-r duration-300 from-pink-500 group-hover:opacity-20 inset-0 opacity-0 rounded-full to-purple-600 transition-opacity"></div>
+                        <div class="absolute inset-0 rounded-full bg-gradient-to-r from-pink-500 to-purple-600 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
                     </a>
                     <div class="flex items-center text-gray-400">
-                        <i class="fa-music fas mr-2 text-pink-400"></i>
+                        <i class="fas fa-music text-pink-400 mr-2"></i>
                         <span>Interactive • Fun • Free</span>
                     </div>
                 </div>
             </div>
         </div>
 
-        
-        <div class="absolute animate-float left-10 top-20">
-            <i class="fa-music fas opacity-60 text-2xl text-pink-400"></i>
+        <!-- Floating Music Notes Animation -->
+        <div class="absolute top-20 left-10 animate-float">
+            <i class="fas fa-music text-pink-400 text-2xl opacity-60"></i>
         </div>
-        <div class="absolute animate-float right-20 top-40" style=animation-delay:1s>
-            <i class="fa-music fas opacity-60 text-purple-400 text-xl"></i>
+        <div class="absolute top-40 right-20 animate-float" style="animation-delay: 1s">
+            <i class="fas fa-music text-purple-400 text-xl opacity-60"></i>
         </div>
-        <div class="absolute animate-float bottom-20 left-20" style=animation-delay:2s>
-            <i class="fa-music fas opacity-60 text-blue-400 text-lg"></i>
-        </div>
-    </div>
-
-    
-    <div class="bg-white py-16">
-        <div class="lg:px-8 max-w-7xl mx-auto px-4 sm:px-6">
-            <div class="mb-12 text-center">
-                <h2 class="font-bold mb-4 text-3xl text-gray-900">Why Sing with MelodyMate?</h2>
-                <p class="text-gray-600 text-lg">The ultimate karaoke experience awaits</p>
-            </div>
-            <div class="gap-8 grid grid-cols-1 md:grid-cols-3">
-                <div class="duration-300 hover:shadow-lg p-6 rounded-lg text-center transition-shadow">
-                    <div class="bg-gradient-to-r flex from-pink-500 h-16 items-center justify-center mb-4 mx-auto rounded-full to-purple-600 w-16">
-                        <i class="fa-sync fas text-2xl text-white"></i>
-                    </div>
-                    <h3 class="font-semibold mb-2 text-gray-900 text-xl">Synchronized Lyrics</h3>
-                    <p class=text-gray-600>Lyrics highlight in real-time as you sing along</p>
-                </div>
-                <div class="duration-300 hover:shadow-lg p-6 rounded-lg text-center transition-shadow">
-                    <div class="bg-gradient-to-r flex from-purple-500 h-16 items-center justify-center mb-4 mx-auto rounded-full to-blue-600 w-16">
-                        <i class="fa-guitar fas text-2xl text-white"></i>
-                    </div>
-                    <h3 class="font-semibold mb-2 text-gray-900 text-xl">Instrumental Tracks</h3>
-                    <p class=text-gray-600>Professional backing tracks for the perfect sing-along</p>
-                </div>
-                <div class="duration-300 hover:shadow-lg p-6 rounded-lg text-center transition-shadow">
-                    <div class="bg-gradient-to-r flex from-blue-500 h-16 items-center justify-center mb-4 mx-auto rounded-full to-indigo-600 w-16">
-                        <i class="fa-gamepad fas text-2xl text-white"></i>
-                    </div>
-                    <h3 class="font-semibold mb-2 text-gray-900 text-xl">Interactive Controls</h3>
-                    <p class=text-gray-600>Play, pause, seek, and control your karaoke experience</p>
-                </div>
-            </div>
+        <div class="absolute bottom-20 left-20 animate-float" style="animation-delay: 2s">
+            <i class="fas fa-music text-blue-400 text-lg opacity-60"></i>
         </div>
     </div>
 
-    
-    <footer class="bg-gray-900 py-8 text-white">
-        <div class="lg:px-8 max-w-7xl mx-auto px-4 sm:px-6 text-center">
-            <p class=text-gray-400>© 2025 MelodyMate. Made with <i class="fa-heart fas text-pink-400"></i> for music lovers.</p>
+    <!-- Features Section -->
+    <div class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Why Sing with MelodyMate?</h2>
+                <p class="text-lg text-gray-600">The ultimate karaoke experience awaits</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center p-6 rounded-lg hover:shadow-lg transition-shadow duration-300">
+                    <div class="w-16 h-16 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-sync text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Synchronized Lyrics</h3>
+                    <p class="text-gray-600">Lyrics highlight in real-time as you sing along</p>
+                </div>
+                <div class="text-center p-6 rounded-lg hover:shadow-lg transition-shadow duration-300">
+                    <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-guitar text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Instrumental Tracks</h3>
+                    <p class="text-gray-600">Professional backing tracks for the perfect sing-along</p>
+                </div>
+                <div class="text-center p-6 rounded-lg hover:shadow-lg transition-shadow duration-300">
+                    <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-gamepad text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Interactive Controls</h3>
+                    <p class="text-gray-600">Play, pause, seek, and control your karaoke experience</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-gray-400">© 2025 MelodyMate. Made with <i class="fas fa-heart text-pink-400"></i> for music lovers.</p>
         </div>
     </footer>
 
-    <script src=/MelodyMate.c5356bf1.js></script>
+    <script type="module" src="/MelodyMate.cc96e9ac.js"></script>
 
+</body></html>

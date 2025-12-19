@@ -320,8 +320,9 @@ document.addEventListener('DOMContentLoaded', async function() {
   const { loadNavBar } = await import('./navbar-loader.js');
   loadNavBar();
 
-  // Import the API
+  // Import the API and notification utilities
   const { karaokeAPI, demoSongs } = await import('./karaoke-data.js');
+  const { showNotification } = await import('./utils.js');
 
   // Create karaoke interface elements
   const karaokeContainer = document.createElement('div');
@@ -486,7 +487,7 @@ document.addEventListener('DOMContentLoaded', async function() {
     results.forEach(song => {
       const resultItem = document.createElement('div');
       resultItem.className = 'bg-white p-4 rounded-lg border border-gray-200 hover:border-purple-300 cursor-pointer transition-all duration-200 hover:shadow-md';
-      
+
       const originalContent = `
         <div class="flex justify-between items-start">
           <div class="flex-1">
@@ -543,48 +544,6 @@ document.addEventListener('DOMContentLoaded', async function() {
     const mins = Math.floor(seconds / 60);
     const secs = Math.floor(seconds % 60);
     return `${mins}:${secs.toString().padStart(2, '0')}`;
-  }
-
-  // Notification system
-  function showNotification(message, type = 'info') {
-    // Remove existing notifications
-    const existingNotifications = document.querySelectorAll('.notification');
-    existingNotifications.forEach(notification => notification.remove());
-
-    // Create notification
-    const notification = document.createElement('div');
-    notification.className = `notification fixed top-4 right-4 z-50 px-6 py-3 rounded-lg shadow-lg transform translate-x-full transition-transform duration-300 ${
-      type === 'success' ? 'bg-green-500 text-white' :
-      type === 'error' ? 'bg-red-500 text-white' :
-      'bg-blue-500 text-white'
-    }`;
-    notification.innerHTML = `
-      <div class="flex items-center">
-        <i class="fas ${
-          type === 'success' ? 'fa-check-circle' :
-          type === 'error' ? 'fa-exclamation-circle' :
-          'fa-info-circle'
-        } mr-2"></i>
-        ${message}
-      </div>
-    `;
-
-    document.body.appendChild(notification);
-
-    // Animate in
-    setTimeout(() => {
-      notification.classList.remove('translate-x-full');
-    }, 100);
-
-    // Auto remove
-    setTimeout(() => {
-      notification.classList.add('translate-x-full');
-      setTimeout(() => {
-        if (notification.parentNode) {
-          notification.parentNode.removeChild(notification);
-        }
-      }, 300);
-    }, 3000);
   }
 
   // Add custom styles for sliders

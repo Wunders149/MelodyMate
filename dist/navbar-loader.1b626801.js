@@ -207,11 +207,11 @@
       });
     }
   }
-})({"cf8Qw":[function(require,module,exports,__globalThis) {
+})({"liuWu":[function(require,module,exports,__globalThis) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
-var HMR_SERVER_PORT = 1234;
+var HMR_SERVER_PORT = 62611;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "439701173a9199ea";
 var HMR_USE_SSE = false;
@@ -717,48 +717,15 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "loadNavBar", ()=>loadNavBar);
-function chargerPage(url, conteneurId) {
-    var xhr = new XMLHttpRequest();
-    xhr.onreadystatechange = function() {
-        if (xhr.readyState == 4 && xhr.status == 200) document.getElementById(conteneurId).innerHTML = xhr.responseText;
-    };
-    xhr.open('GET', url, true);
-    xhr.send();
-}
-function loadNavBar() {
-    chargerPage('./src/pages/navbar.html', 'navBar');
+var _utilsJs = require("./utils.js");
+async function loadNavBar() {
+    try {
+        await (0, _utilsJs.chargerPage)('./src/pages/navbar.html', 'navBar');
+    } catch (error) {
+        console.error('Failed to load navbar:', error);
+    }
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"jnFvT":[function(require,module,exports,__globalThis) {
-exports.interopDefault = function(a) {
-    return a && a.__esModule ? a : {
-        default: a
-    };
-};
-exports.defineInteropFlag = function(a) {
-    Object.defineProperty(a, '__esModule', {
-        value: true
-    });
-};
-exports.exportAll = function(source, dest) {
-    Object.keys(source).forEach(function(key) {
-        if (key === 'default' || key === '__esModule' || Object.prototype.hasOwnProperty.call(dest, key)) return;
-        Object.defineProperty(dest, key, {
-            enumerable: true,
-            get: function() {
-                return source[key];
-            }
-        });
-    });
-    return dest;
-};
-exports.export = function(dest, destName, get) {
-    Object.defineProperty(dest, destName, {
-        enumerable: true,
-        get: get
-    });
-};
-
-},{}]},["cf8Qw"], null, "parcelRequireb585", {})
+},{"./utils.js":"1X9hu","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}]},["liuWu"], null, "parcelRequireb585", {})
 
 //# sourceMappingURL=navbar-loader.1b626801.js.map
