@@ -3,23 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index - MelodyMate</title>
+    <title>MelodyMate - Find Your Tune, Feel The Words</title>
     <link rel="stylesheet" href="./dist/output.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
-<body>
-    <div id="navBar"></div>  
-    <div class="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl">
-        <div class="flex md:flex-row flex-col">
-            <div class="md:flex-shrink-0">
-                <img class="h-48 w-full object-cover md:h-full md:w-48" src="./src/images/logo.jpeg" alt="RAZAFIMAHEFA Philibert">
+<body class="bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 min-h-screen">
+    <div id="navBar"></div>
+
+    <!-- Hero Section -->
+    <div class="relative overflow-hidden">
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16 text-center lg:pt-32">
+            <div class="animate-fade-in-up">
+                <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-white mb-6">
+                    <span class="bg-gradient-to-r from-pink-400 to-purple-600 bg-clip-text text-transparent">
+                        MelodyMate
+                    </span>
+                </h1>
+                <p class="text-xl sm:text-2xl lg:text-3xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                    Discover the soul of music through lyrics that touch your heart
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <a href="./src/pages/search.html" class="group relative inline-flex items-center px-8 py-4 bg-gradient-to-r from-pink-500 to-purple-600 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+                        <i class="fas fa-search mr-2"></i>
+                        Start Exploring
+                        <div class="absolute inset-0 rounded-full bg-gradient-to-r from-pink-500 to-purple-600 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+                    </a>
+                    <div class="flex items-center text-gray-400">
+                        <i class="fas fa-music text-pink-400 mr-2"></i>
+                        <span>Free • Unlimited • Instant</span>
+                    </div>
+                </div>
             </div>
-            <div class="p-8">
-                <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">MelodyMate</div>
-                <a href="./src/pages/search.html" class="block mt-1 text-lg leading-tight font-medium text-black hover:underline">Find Your Tune, Feel The Words</a>
-                <p class="mt-2 text-slate-500">Explore the heart of your favorite songs with MelodyMate, where every word and melody come alive.</p>
+        </div>
+
+        <!-- Floating Music Notes Animation -->
+        <div class="absolute top-20 left-10 animate-float">
+            <i class="fas fa-music text-pink-400 text-2xl opacity-60"></i>
+        </div>
+        <div class="absolute top-40 right-20 animate-float" style="animation-delay: 1s;">
+            <i class="fas fa-music text-purple-400 text-xl opacity-60"></i>
+        </div>
+        <div class="absolute bottom-20 left-20 animate-float" style="animation-delay: 2s;">
+            <i class="fas fa-music text-blue-400 text-lg opacity-60"></i>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <div class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Why Choose MelodyMate?</h2>
+                <p class="text-lg text-gray-600">Experience music like never before</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center p-6 rounded-lg hover:shadow-lg transition-shadow duration-300">
+                    <div class="w-16 h-16 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-search text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Instant Search</h3>
+                    <p class="text-gray-600">Find lyrics for millions of songs in seconds</p>
+                </div>
+                <div class="text-center p-6 rounded-lg hover:shadow-lg transition-shadow duration-300">
+                    <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-heart text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Feel the Emotion</h3>
+                    <p class="text-gray-600">Connect deeper with songs through their lyrics</p>
+                </div>
+                <div class="text-center p-6 rounded-lg hover:shadow-lg transition-shadow duration-300">
+                    <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-mobile-alt text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Mobile Friendly</h3>
+                    <p class="text-gray-600">Access lyrics anywhere, anytime on any device</p>
+                </div>
             </div>
         </div>
     </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-gray-400">&copy; 2025 MelodyMate. Made with <i class="fas fa-heart text-pink-400"></i> for music lovers.</p>
+        </div>
+    </footer>
+
     <script src="./src/scripts/scripts.js"></script>
 </body>
 </html>
