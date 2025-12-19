@@ -715,6 +715,7 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 
 },{}],"cNjRp":[function(require,module,exports,__globalThis) {
 // Karaoke Engine - Interactive Lyrics with Audio Synchronization
+var _tailwindCss = require("../styles/tailwind.css");
 class KaraokeEngine {
     constructor(audioElement, lyricsContainer, progressBar, controls){
         this.audio = audioElement;
@@ -1017,11 +1018,14 @@ document.addEventListener('DOMContentLoaded', async function() {
     // Import the API and notification utilities
     const { karaokeAPI, demoSongs } = await require("d3afdc61827a6");
     const { showNotification } = await require("d9066969bdbf4adc");
-    // Create karaoke interface elements
-    const karaokeContainer = document.createElement('div');
-    karaokeContainer.id = 'karaokeContainer';
-    karaokeContainer.className = 'max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-16';
-    karaokeContainer.innerHTML = `
+    // Check which page we're on
+    const isLyricsPage = window.location.pathname.includes('lyrics.html');
+    const isSearchPage = window.location.pathname.includes('search.html');
+    if (isSearchPage) {
+        const karaokeContainer1 = document.createElement('div');
+        karaokeContainer1.id = 'karaokeContainer';
+        karaokeContainer1.className = 'max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-16';
+        karaokeContainer1.innerHTML = `
     <div class="bg-white rounded-2xl shadow-xl p-8">
       <div class="text-center mb-6">
         <h2 id="songTitle" class="text-2xl font-bold text-gray-900 mb-2">Search for a Song to Start Karaoke</h2>
@@ -1080,86 +1084,174 @@ document.addEventListener('DOMContentLoaded', async function() {
       </div>
     </div>
   `;
-    // Insert karaoke container after the instructions
-    const instructions = document.querySelector('.bg-white.rounded-2xl.shadow-xl.p-6');
-    if (instructions) instructions.parentNode.insertBefore(karaokeContainer, instructions.nextSibling);
-    // Initialize karaoke engine
-    const audio = new Audio();
-    const lyricsContainer = document.getElementById('lyricsDisplay');
-    const progressBar = document.getElementById('progressBar');
-    const controls = {
-        playPause: document.getElementById('playPauseBtn'),
-        volume: document.getElementById('volumeControl')
-    };
-    const karaoke = new KaraokeEngine(audio, lyricsContainer, progressBar, controls);
-    // Load demo songs
-    const demoSongsContainer = document.getElementById('demoSongs');
-    Object.entries(demoSongs).forEach(([id, song])=>{
-        const songCard = document.createElement('div');
-        songCard.className = 'bg-gradient-to-r from-purple-100 to-pink-100 p-4 rounded-lg cursor-pointer hover:shadow-lg transition-all duration-300 transform hover:scale-105';
-        songCard.innerHTML = `
-      <div class="flex items-center space-x-3">
-        <div class="w-10 h-10 bg-gradient-to-r from-pink-500 to-purple-600 rounded-lg flex items-center justify-center">
-          <i class="fas fa-music text-white"></i>
+        // Insert karaoke container after the instructions
+        const instructions = document.querySelector('.bg-white.rounded-2xl.shadow-xl.p-6');
+        if (instructions) instructions.parentNode.insertBefore(karaokeContainer1, instructions.nextSibling);
+        // Initialize karaoke engine
+        const audio = new Audio();
+        const lyricsContainer = document.getElementById('lyricsDisplay');
+        const progressBar = document.getElementById('progressBar');
+        const controls = {
+            playPause: document.getElementById('playPauseBtn'),
+            volume: document.getElementById('volumeControl')
+        };
+        const karaoke = new KaraokeEngine(audio, lyricsContainer, progressBar, controls);
+        // Load demo songs
+        const demoSongsContainer = document.getElementById('demoSongs');
+        if (demoSongsContainer) Object.entries(demoSongs).forEach(([id, song])=>{
+            const songCard = document.createElement('div');
+            songCard.className = 'bg-gradient-to-r from-purple-100 to-pink-100 p-4 rounded-lg cursor-pointer hover:shadow-lg transition-all duration-300 transform hover:scale-105';
+            songCard.innerHTML = `
+        <div class="flex items-center space-x-3">
+          <div class="w-10 h-10 bg-gradient-to-r from-pink-500 to-purple-600 rounded-lg flex items-center justify-center">
+            <i class="fas fa-music text-white"></i>
+          </div>
+          <div>
+            <h4 class="font-semibold text-gray-900">${song.title}</h4>
+            <p class="text-sm text-gray-600">${song.artist}</p>
+          </div>
         </div>
-        <div>
-          <h4 class="font-semibold text-gray-900">${song.title}</h4>
-          <p class="text-sm text-gray-600">${song.artist}</p>
-        </div>
-      </div>
-    `;
-        songCard.addEventListener('click', ()=>{
-            karaoke.loadSong(song);
-            karaokeContainer.classList.remove('hidden');
-            document.getElementById('audioControls').classList.remove('hidden');
-            lyricsContainer.classList.remove('hidden');
-            karaokeContainer.scrollIntoView({
-                behavior: 'smooth'
+      `;
+            songCard.addEventListener('click', ()=>{
+                karaoke.loadSong(song);
+                karaokeContainer1.classList.remove('hidden');
+                document.getElementById('audioControls').classList.remove('hidden');
+                lyricsContainer.classList.remove('hidden');
+                karaokeContainer1.scrollIntoView({
+                    behavior: 'smooth'
+                });
             });
+            demoSongsContainer.appendChild(songCard);
         });
-        demoSongsContainer.appendChild(songCard);
-    });
-    // Search functionality
-    const searchBtn = document.getElementById('searchBtn');
-    const songSearch = document.getElementById('songSearch');
-    const artistSearch = document.getElementById('artistSearch');
-    const searchResults = document.getElementById('searchResults');
-    searchBtn.addEventListener('click', async ()=>{
-        const songQuery = songSearch.value.trim();
-        const artistQuery = artistSearch.value.trim();
-        if (!songQuery) {
-            showNotification('Please enter a song title', 'error');
-            return;
-        }
-        searchBtn.disabled = true;
-        searchBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Searching...';
-        try {
-            const results = await karaokeAPI.searchSongs(songQuery, artistQuery);
-            if (results.length === 0) {
-                searchResults.innerHTML = '<p class="text-gray-500 text-center py-4">No songs found. Try different search terms.</p>';
-                searchResults.classList.remove('hidden');
-                return;
-            }
-            displaySearchResults(results);
-            searchResults.classList.remove('hidden');
-        } catch (error) {
-            console.error('Search error:', error);
-            showNotification('Search failed. Please try again.', 'error');
-        } finally{
-            searchBtn.disabled = false;
-            searchBtn.innerHTML = '<i class="fas fa-search mr-2"></i>Search';
-        }
-    });
-    // Allow Enter key to search
-    [
-        songSearch,
-        artistSearch
-    ].forEach((input)=>{
-        input.addEventListener('keypress', (e)=>{
-            if (e.key === 'Enter') searchBtn.click();
+        else console.warn('Demo songs container not found');
+        // Search functionality
+        const searchBtn = document.getElementById('searchBtn');
+        const songSearch = document.getElementById('songSearch');
+        const artistSearch = document.getElementById('artistSearch');
+        const searchResults1 = document.getElementById('searchResults');
+        if (searchBtn && songSearch && artistSearch && searchResults1) {
+            searchBtn.addEventListener('click', async ()=>{
+                const songQuery = songSearch.value.trim();
+                const artistQuery = artistSearch.value.trim();
+                if (!songQuery) {
+                    showNotification('Please enter a song title', 'error');
+                    return;
+                }
+                searchBtn.disabled = true;
+                searchBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Searching...';
+                try {
+                    const results = await karaokeAPI.searchSongs(songQuery, artistQuery);
+                    if (results.length === 0) {
+                        searchResults1.innerHTML = '<p class="text-gray-500 text-center py-4">No songs found. Try different search terms.</p>';
+                        searchResults1.classList.remove('hidden');
+                        return;
+                    }
+                    displaySearchResults(results, karaoke, isSearchPage);
+                    searchResults1.classList.remove('hidden');
+                } catch (error) {
+                    console.error('Search error:', error);
+                    showNotification('Search failed. Please try again.', 'error');
+                } finally{
+                    searchBtn.disabled = false;
+                    searchBtn.innerHTML = '<i class="fas fa-search mr-2"></i>Search';
+                }
+            });
+            // Allow Enter key to search
+            [
+                songSearch,
+                artistSearch
+            ].forEach((input)=>{
+                input.addEventListener('keypress', (e)=>{
+                    if (e.key === 'Enter') searchBtn.click();
+                });
+            });
+        } else console.warn('Search elements not found');
+    } else if (isLyricsPage) {
+        // Initialize karaoke engine for lyrics.html (elements already exist)
+        const audio = new Audio();
+        const lyricsContainer = document.getElementById('lyricsDisplay');
+        const progressBar = document.getElementById('progressBar');
+        const controls = {
+            playPause: document.getElementById('playPauseBtn'),
+            volume: document.getElementById('volumeControl')
+        };
+        const karaoke = new KaraokeEngine(audio, lyricsContainer, progressBar, controls);
+        // Add event listeners for additional controls in lyrics.html
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const rewindBtn = document.getElementById('rewindBtn');
+        const forwardBtn = document.getElementById('forwardBtn');
+        const speedControl = document.getElementById('speedControl');
+        const effectControl = document.getElementById('effectControl');
+        if (prevBtn) prevBtn.addEventListener('click', ()=>{
+            // For now, just restart the current song
+            karaoke.audio.currentTime = 0;
+            karaoke.updateLyrics();
         });
-    });
-    function displaySearchResults(results) {
+        if (nextBtn) nextBtn.addEventListener('click', ()=>{
+            // For now, just go to end of song
+            karaoke.audio.currentTime = karaoke.audio.duration || 60;
+        });
+        if (rewindBtn) rewindBtn.addEventListener('click', ()=>{
+            karaoke.audio.currentTime = Math.max(0, karaoke.audio.currentTime - 10);
+            karaoke.updateLyrics();
+        });
+        if (forwardBtn) forwardBtn.addEventListener('click', ()=>{
+            const duration = karaoke.audio.duration || karaoke.currentSong?.duration || 60;
+            karaoke.audio.currentTime = Math.min(duration, karaoke.audio.currentTime + 10);
+            karaoke.updateLyrics();
+        });
+        if (speedControl) speedControl.addEventListener('change', (e)=>{
+            karaoke.audio.playbackRate = parseFloat(e.target.value);
+        });
+        if (effectControl) effectControl.addEventListener('change', (e)=>{
+            // For now, just show a notification
+            showNotification(`${e.target.value} effect not implemented yet`, 'info');
+        });
+        // Search functionality for lyrics.html
+        const searchBtn = document.getElementById('searchBtn');
+        const songSearch = document.getElementById('songSearch');
+        const artistSearch = document.getElementById('artistSearch');
+        const searchResults1 = document.getElementById('searchResults');
+        if (searchBtn && songSearch && artistSearch && searchResults1) {
+            searchBtn.addEventListener('click', async ()=>{
+                const songQuery = songSearch.value.trim();
+                const artistQuery = artistSearch.value.trim();
+                if (!songQuery) {
+                    showNotification('Please enter a song title', 'error');
+                    return;
+                }
+                searchBtn.disabled = true;
+                searchBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-3"></i>Searching...';
+                try {
+                    const results = await karaokeAPI.searchSongs(songQuery, artistQuery);
+                    if (results.length === 0) {
+                        searchResults1.innerHTML = '<p class="text-gray-500 text-center py-4">No songs found. Try different search terms.</p>';
+                        searchResults1.classList.remove('hidden');
+                        return;
+                    }
+                    displaySearchResults(results, karaoke, isSearchPage);
+                    searchResults1.classList.remove('hidden');
+                } catch (error) {
+                    console.error('Search error:', error);
+                    showNotification('Search failed. Please try again.', 'error');
+                } finally{
+                    searchBtn.disabled = false;
+                    searchBtn.innerHTML = '<i class="fas fa-search mr-3"></i>Search';
+                }
+            });
+            // Allow Enter key to search
+            [
+                songSearch,
+                artistSearch
+            ].forEach((input)=>{
+                input.addEventListener('keypress', (e)=>{
+                    if (e.key === 'Enter') searchBtn.click();
+                });
+            });
+        } else console.warn('Search elements not found on lyrics page');
+    }
+    function displaySearchResults(results, karaoke, isSearchPage) {
         searchResults.innerHTML = '';
         results.forEach((song)=>{
             const resultItem = document.createElement('div');
@@ -1184,12 +1276,15 @@ document.addEventListener('DOMContentLoaded', async function() {
                     const songData = await karaokeAPI.searchAndGetSong(song.name, song.artistName);
                     if (songData) {
                         karaoke.loadSong(songData);
-                        karaokeContainer.classList.remove('hidden');
+                        // Handle different page layouts
+                        if (isSearchPage) {
+                            karaokeContainer.classList.remove('hidden');
+                            karaokeContainer.scrollIntoView({
+                                behavior: 'smooth'
+                            });
+                        }
                         document.getElementById('audioControls').classList.remove('hidden');
-                        lyricsContainer.classList.remove('hidden');
-                        karaokeContainer.scrollIntoView({
-                            behavior: 'smooth'
-                        });
+                        document.getElementById('lyricsDisplay').classList.remove('hidden');
                         showNotification(`Loaded "${songData.title}" by ${songData.artist}`, 'success');
                     } else {
                         showNotification('Lyrics not available for this song', 'error');
@@ -1218,7 +1313,7 @@ document.addEventListener('DOMContentLoaded', async function() {
         const secs = Math.floor(seconds % 60);
         return `${mins}:${secs.toString().padStart(2, '0')}`;
     }
-    // Add custom styles for sliders
+    // Add custom styles for sliders and active lyrics
     const style = document.createElement('style');
     style.textContent = `
     .slider::-webkit-slider-thumb {
@@ -1239,11 +1334,22 @@ document.addEventListener('DOMContentLoaded', async function() {
       border: none;
       box-shadow: 0 2px 4px rgba(0,0,0,0.2);
     }
+    .lyric-line.active {
+      background: linear-gradient(135deg, #ec4899, #8b5cf6);
+      color: white;
+      transform: scale(1.05);
+      font-weight: bold;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+      box-shadow: 0 4px 8px rgba(236, 72, 153, 0.3);
+    }
+    .lyric-line {
+      transition: all 0.3s ease;
+    }
   `;
     document.head.appendChild(style);
 });
 
-},{"566758b50efe1b67":"dOAsH","d3afdc61827a6":"Nhj45","d9066969bdbf4adc":"hVWaJ"}],"dOAsH":[function(require,module,exports,__globalThis) {
+},{"566758b50efe1b67":"dOAsH","d3afdc61827a6":"Nhj45","d9066969bdbf4adc":"hVWaJ","../styles/tailwind.css":"9KtUr"}],"dOAsH":[function(require,module,exports,__globalThis) {
 module.exports = Promise.all([
     import("./utils.714af2d8.js"),
     import("./navbar-loader.1b626801.js")
@@ -1255,6 +1361,6 @@ module.exports = import("./karaoke-data.7e6b71c1.js").then(()=>module.bundle.roo
 },{"3EPtN":"3EPtN"}],"hVWaJ":[function(require,module,exports,__globalThis) {
 module.exports = import("./utils.714af2d8.js").then(()=>module.bundle.root('1X9hu'));
 
-},{"1X9hu":"1X9hu"}]},["ckN9Z","cNjRp"], "cNjRp", "parcelRequireb585", {})
+},{"1X9hu":"1X9hu"}],"9KtUr":[function() {},{}]},["ckN9Z","cNjRp"], "cNjRp", "parcelRequireb585", {})
 
 //# sourceMappingURL=search.c3b8e774.js.map

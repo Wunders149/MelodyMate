@@ -714,15 +714,16 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 }
 
 },{}],"8hN6W":[function(require,module,exports,__globalThis) {
+var _tailwindCss = require("../styles/tailwind.css");
 var _utilsJs = require("./utils.js");
 document.addEventListener('DOMContentLoaded', async function() {
     try {
-        await (0, _utilsJs.chargerPage)('./src/pages/navbar.html', 'navBar');
+        await (0, _utilsJs.chargerPage)('../pages/navbar.html', 'navBar');
     } catch (error) {
         console.error('Failed to load navbar:', error);
     }
 });
 
-},{"./utils.js":"1X9hu"}]},["99iLP","8hN6W"], "8hN6W", "parcelRequireb585", {})
+},{"./utils.js":"1X9hu","../styles/tailwind.css":"9KtUr"}],"9KtUr":[function() {},{}]},["99iLP","8hN6W"], "8hN6W", "parcelRequireb585", {})
 
 //# sourceMappingURL=MelodyMate.cc96e9ac.js.map

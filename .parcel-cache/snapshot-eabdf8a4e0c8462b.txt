@@ -1,4 +1,4 @@
-6050
+6051
 93C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\tailwindcss\utilities.css134104515754120898 0
 104C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\@parcel\core\lib\summarizeRequest.js134104521778567476 0
 79C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\any-promise134104515746224277 1
@@ -6,12 +6,12 @@
 118C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\@parcel\runtime-js\lib\helpers\node\node-loader.js134104521740545540 0
 115C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\tailwindcss\types\generated\corePluginList.d.ts134104515754120898 0
 77C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\@lezer\lr134104521707732873 1
-67C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\package.json134105942763693697 0
+67C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\package.json134105986847896364 0
 103C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\caniuse-lite\data\features\meter.js134104521773378483 0
 78C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\is-extglob134104515750199314 1
 118C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\caniuse-lite\data\features\input-file-directory.js134104521772084474 0
 103C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\sucrase\dist\parser\plugins\flow.js134104515752710458 0
-59C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\dist134105956649549309 1
+59C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\dist134106007263662852 1
 112C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\sucrase\dist\transformers\RootTransformer.js134104515752866697 0
 97C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\lightningcss\node\ast.js.flow134104521696175886 0
 119C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\wrap-ansi-cjs\node_modules\ansi-styles\package.json134104515754277109 0
@@ -26,7 +26,7 @@
 99C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\caniuse-lite\data\regions\NF.js134104521773883285 0
 95C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\yaml\browser\dist\errors.js134104515754433322 0
 87C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\object-hash\LICENSE134104515750984292 0
-65C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\index.html134105943382680784 0
+65C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\index.html134105997610366974 0
 102C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\@parcel\core\lib\InternalConfig.js134104521763235215 0
 102C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\@parcel\core\src\public\Symbols.js134104521779983754 0
 105C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\tailwindcss\src\cli\build\watching.js134104515753808473 0
@@ -36,7 +36,7 @@
 72C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\postcss.config.js134104515755062090 0
 89C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\postcss\lib\result.js134104515751639194 0
 86C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\lmdb\src\lmdb-js.h134104521723353229 0
-72C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\package-lock.json134105942695303742 0
+72C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\package-lock.json134105986848632883 0
 82C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\yaml\README.md134104515754277109 0
 99C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\@parcel\bundler-default\LICENSE134104521748396936 0
 93C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\string-width\package.json134104515752394128 0
@@ -50,7 +50,7 @@
 116C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\string-width-cjs\node_modules\strip-ansi\license134104515752394128 0
 117C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\@swc\helpers\_\_class_static_private_field_update134104521679624688 1
 112C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\minimatch\dist\commonjs\brace-expressions.js134104515750671837 0
-66C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\src\scripts134105942908684434 1
+66C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\src\scripts134105975286354887 1
 90C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\to-regex-range\LICENSE134104515754120898 0
 114C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\foreground-child\dist\commonjs\watchdog.js.map134104515749730647 0
 106C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\caniuse-lite\dist\unpacker\browsers.js134104521763757454 0
@@ -113,7 +113,7 @@
 102C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\resolve\test\resolver\invalid_main134104515751925486 1
 103C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\tailwindcss\lib\util\pluginUtils.js134104515753335328 0
 110C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\caniuse-lite\data\features\font-feature.js134104521768843841 0
-78C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\src\styles\tailwind.css134105941311162368 0
+78C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\src\styles\tailwind.css134105995078431118 0
 108C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\postcss-import\lib\assign-layer-names.js134104515751296715 0
 86C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\json5\package.json134104521709668929 0
 101C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\sucrase\dist\esm\HelperManager.js134104515752394128 0
@@ -129,18 +129,27 @@
 79C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\ansi-styles134104515746224277 1
 112C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\wavesurfer.js\dist\__tests__\timer.test.d.ts134105942694491725 0
 90C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\color-convert\index.js134104515749101895 0
-73C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\src\scripts\app.js134105940660590285 0
+73C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\src\scripts\app.js134105985379703235 0
 103C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\node-releases\data\release-schedule134104521752787185 1
 93C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\dotenv-expand\lib\main.js134104521703941060 0
 100C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\.bin\download-lmdb-prebuilds.cmd134104522162067427 0
 92C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\tailwindcss\src\cli\help134104515753808473 1
 82C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\src\scripts\karaoke-data.js134105951911811819 0
 80C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\yaml\util.js134104515755062090 0
-84C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\src\scripts\karaoke-engine.js134105956409620424 0
+84C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\src\scripts\karaoke-engine.js134106007433332321 0
 119C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\@swc\helpers\cjs\_iterable_to_array_limit_loose.cjs134104521677542965 0
 101C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\yaml\dist\parse\line-counter.d.ts134104515754905881 0
+73C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\chalk134104521744683115 1
+108C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\caniuse-lite\data\features\websockets.js134104521780713656 0
+119C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\caniuse-lite\data\features\dom-manip-convenience.js134104521768247892 0
+105C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\type-fest\source\set-return-type.d.ts134104521715249027 0
+111C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\lmdb\node_modules\node-addon-api\napi-inl.h134104521761549995 0
+91C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\tailwindcss\screens.css134104515753652232 0
+113C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\@swc\helpers\_\_get_prototype_of\package.json134104521679902591 0
+91C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\yaml\dist\nodes\toJS.js134104515754749636 0
+83C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\src\scripts\navbar-loader.js134106001836903661 0
 107C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\@parcel\watcher\src\wasm\WasmBackend.hh134104521699394942 0
-77C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\src\scripts\scripts.js134104515755062090 0
+77C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\src\scripts\scripts.js134106001836783922 0
 74C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\nanoid134104515750984292 1
 95C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\utility-types\dist\index.js134104521673388281 0
 127C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\msgpackr-extract\node_modules\detect-libc\lib\filesystem.js134104521755587360 0
@@ -152,26 +161,30 @@
 125C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\string-width-cjs\node_modules\emoji-regex\LICENSE-MIT.txt134104515752237914 0
 110C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\parcel\node_modules\commander\lib\error.js134104521759904825 0
 84C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\lmdb\src\env.cpp134104521723190341 0
-89C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\src\scripts\search-enhancements.js134105940660501885 0
+89C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\src\scripts\search-enhancements.js134105976563163395 0
 116C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\string-width-cjs\node_modules\ansi-regex\license134104515752237914 0
 108C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\tailwindcss\lib\public\resolve-config.js134104515753335328 0
 99C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\yaml\browser\dist\schema\common134104515754589536 1
 106C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\tailwindcss\lib\util\isKeyframeRule.js134104515753335328 0
 113C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\caniuse-lite\data\features\async-functions.js134104521758918507 0
+75C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\pirates134104515751296715 1
+102C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\caniuse-lite\data\features\zstd.js134104521781115273 0
+119C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\@jridgewell\gen-mapping\dist\gen-mapping.umd.js.map134104515745724934 0
+75C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\src\scripts\utils.js134105976020859396 0
 118C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\@swc\helpers\_\_await_async_generator\package.json134104521679393755 0
 117C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\wavesurfer.js\dist\__tests__\wavesurfer.test.d.ts134105942694491725 0
 100C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\glob\dist\commonjs\glob.d.ts.map134104515749886885 0
 91C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\semver\classes\index.js134104521705051658 0
-76C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\src\pages\lyrics.html134105940857298156 0
+76C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\src\pages\lyrics.html134106000513795896 0
 107C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\tailwindcss\src\util\normalizeConfig.js134104515753964676 0
 111C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\lmdb\dependencies\lz4\lib\lz4frame_static.h134104521727590785 0
 86C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\dotenv\config.d.ts134104521708436048 0
 99C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\fast-glob\out\utils\stream.d.ts134104515749635584 0
 106C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\caniuse-lite\data\features\testfeat.js134104521779664167 0
-76C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\src\pages\navbar.html134105943554878091 0
+76C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\src\pages\navbar.html134106000125733736 0
 94C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\term-size\vendor\.DS_Store134104521684779446 0
 94C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\react-refresh\package.json134104521675306809 0
-76C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\src\pages\search.html134105952171825130 0
+76C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\src\pages\search.html134106000513795896 0
 113C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\@swc\helpers\esm\_class_private_field_init.js134104521678209101 0
 111C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\electron-to-chromium\chromium-versions.json134104521757915519 0
 93C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\resolve\test\resolver\baz134104515751925486 1
@@ -187,7 +200,7 @@
 121C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\@parcel\error-overlay\src\components\NavigationBar.js134104521676380988 0
 110C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\wavesurfer.js\dist\plugins\envelope.min.js134105942692309656 0
 94C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\yaml\dist\doc\anchors.d.ts134104515754749636 0
-86C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\.package-lock.json134105942695796876 0
+86C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\.package-lock.json134105986849032487 0
 108C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\caniuse-lite\data\features\web-serial.js134104521780706293 0
 124C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\@parcel\runtime-js\lib\helpers\browser\preload-loader.js134104521740715183 0
 116C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\postcss-selector-parser\dist\selectors\string.js134104515751452927 0
@@ -231,7 +244,6 @@
 76C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\anymatch134104515746390635 1
 104C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\ts-interface-checker\dist\types.d.ts134104515754120898 0
 85C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\lines-and-columns134104515750511730 1
-82C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\dist\MelodyMate.3464ddca.js134105956648976706 0
 114C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\node-gyp-build-optional-packages\build-test.js134104521672560337 0
 93C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\resolve\test\mock_sync.js134104515751769246 0
 103C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\tailwindcss\src\util\negateValue.js134104515753964676 0
@@ -315,9 +327,6 @@
 109C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\caniuse-lite\data\features\mediasource.js134104521773368503 0
 92C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\tailwindcss\variants.css134104515754120898 0
 81C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\camelcase-css134104515746723280 1
-73C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\chalk134104521744683115 1
-108C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\caniuse-lite\data\features\websockets.js134104521780713656 0
-119C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\caniuse-lite\data\features\dom-manip-convenience.js134104521768247892 0
 92C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\util-deprecate\README.md134104515754120898 0
 95C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\resolve\test\filter_sync.js134104515751769246 0
 86C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\yaml\dist\visit.js134104515755062090 0
@@ -592,8 +601,6 @@
 102C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\@parcel\utils\test\input\sourcemap134104521790408877 1
 78C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\picocolors134104521752249717 1
 72C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\pify134104515751296715 1
-75C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\pirates134104515751296715 1
-102C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\caniuse-lite\data\features\zstd.js134104521781115273 0
 117C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\minimatch\dist\commonjs\assert-valid-pattern.d.ts134104515750671837 0
 75C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\postcss134104515751639194 1
 109C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\@parcel\core\lib\requests\AssetRequest.js134104521762536938 0
@@ -658,10 +665,6 @@
 80C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\run-parallel134104515752081700 1
 79C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\safe-buffer134104521714695145 1
 83C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\shebang-command134104515752081700 1
-148C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\ordered-binary\.nyc_output\processinfo\5b6bd808-0399-4ee6-9395-344688761dfa.json134104521667240481 0
-99C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\caniuse-lite\data\regions\AT.js134104521758928482 0
-103C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\caniuse-lite\data\features\webgl.js134104521780713656 0
-98C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\tailwindcss\lib\lib\offsets.js134104515753179114 0
 81C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\shebang-regex134104515752081700 1
 87C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\tailwindcss\src\cli134104515753808473 1
 79C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\signal-exit134104515752237914 1
@@ -932,9 +935,9 @@
 90C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\postcss\lib\symbols.js134104515751639194 0
 116C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\yaml\browser\dist\compose\resolve-flow-scalar.js134104515754433322 0
 95C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\yaml\dist\schema\types.d.ts134104515754905881 0
+91C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\@swc\helpers\_\_type_of134104521680682943 1
 86C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\tslib\package.json134104521699255812 0
 96C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\glob\dist\esm\pattern.js.map134104515750043101 0
-91C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\@swc\helpers\_\_type_of134104521680682943 1
 113C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\tailwindcss\lib\util\formatVariantSelector.js134104515753335328 0
 84C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\jiti\register.js134104515750511730 0
 109C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\yaml\browser\dist\schema\yaml-1.1\omap.js134104515754589536 0
@@ -1136,11 +1139,6 @@
 113C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\tailwindcss\src\lib\resolveDefaultsAtRules.js134104515753808473 0
 86C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\msgpackr\README.md134104521732571536 0
 93C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\yaml\dist\nodes\Scalar.js134104515754749636 0
-105C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\type-fest\source\set-return-type.d.ts134104521715249027 0
-111C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\lmdb\node_modules\node-addon-api\napi-inl.h134104521761549995 0
-91C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\tailwindcss\screens.css134104515753652232 0
-113C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\@swc\helpers\_\_get_prototype_of\package.json134104521679902591 0
-91C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\yaml\dist\nodes\toJS.js134104515754749636 0
 107C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\supports-preserve-symlinks-flag\.github134104515753022909 1
 120C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\yaml\browser\dist\compose\resolve-flow-collection.js134104515754433322 0
 120C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\wavesurfer.js\dist\reactive\state-event-emitter.d.ts134105942694454731 0
@@ -1154,7 +1152,6 @@
 94C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\yaml\dist\nodes\YAMLSeq.js134104515754749636 0
 105C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\wavesurfer.js\dist\plugins\regions.js134105942693138546 0
 92C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\yaml\dist\doc\anchors.js134104515754749636 0
-84C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\dist\karaoke-data.4457fe3a.js134105956648712024 0
 97C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\yaml\dist\doc\applyReviver.js134104515754749636 0
 97C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\yaml\dist\doc\createNode.d.ts134104515754749636 0
 98C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\autoprefixer\lib\resolution.js134104515746632805 0
@@ -1419,6 +1416,7 @@
 103C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\yaml\browser\dist\doc\createNode.js134104515754433322 0
 105C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\yaml\browser\dist\compose\composer.js134104515754433322 0
 109C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\caniuse-lite\data\features\eventsource.js134104521768538461 0
+84C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\dist\karaoke-data.7e6b71c1.js134106006883386203 0
 89C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\@lezer\common\LICENSE134104521703297027 0
 101C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\caniuse-lite\data\features\ime.js134104521771884525 0
 99C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\@parcel\core\test\utils.test.js134104521783698843 0
@@ -1596,6 +1594,7 @@
 93C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\postcss\lib\postcss.d.mts134104515751639194 0
 98C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\tailwindcss\lib\util\toPath.js134104515753335328 0
 112C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\resolve\test\module_dir\zmodules\bbb\main.js134104515751769246 0
+81C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\dist\src\pages\lyrics.html134106004814544891 0
 101C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\@parcel\reporter-cli\package.json134104521764048863 0
 98C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\@swc\helpers\cjs\_inherits.cjs134104521677383687 0
 112C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\tailwindcss\src\util\removeAlphaVariables.js134104515753964676 0
@@ -1622,7 +1621,6 @@
 94C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\@isaacs\cliui\package.json134104515745724934 0
 92C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\@parcel\packager-raw\src134104521740545540 1
 104C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\wavesurfer.js\dist\wavesurfer.min.js134105942693863133 0
-82C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\dist\search.c719088e.js.map134105940912520601 0
 98C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\wavesurfer.js\dist\webaudio.js134105942693863133 0
 110C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\minimatch\dist\esm\assert-valid-pattern.js134104515750671837 0
 99C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\caniuse-lite\data\regions\MT.js134104521773538869 0
@@ -1729,7 +1727,7 @@
 105C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\tailwindcss\src\util\resolveConfig.js134104515753964676 0
 92C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\normalize-path\README.md134104515750984292 0
 106C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\wavesurfer.js\dist\plugins\envelope.js134105942692309656 0
-87C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\dist\MelodyMate.4110e2cc.css.map134105953119115643 0
+87C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\dist\MelodyMate.4110e2cc.css.map134105996482924188 0
 104C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\wavesurfer.js\dist\plugins\hover.cjs134105942691840932 0
 107C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\wavesurfer.js\dist\plugins\hover.esm.js134105942692491220 0
 111C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\@parcel\core\src\TargetDescriptor.schema.js134104521780023643 0
@@ -2003,8 +2001,8 @@
 87C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\tailwindcss\scripts134104515753652232 1
 109C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\tailwindcss\src\util\parseObjectStyles.js134104515753964676 0
 115C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\parcel\node_modules\commander\typings\esm.d.mts134104521761035572 0
-92C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\tailwindcss\tailwind.css134104515754120898 0
 113C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\@swc\helpers\_\_unsupported_iterable_to_array134104521680692936 1
+92C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\tailwindcss\tailwind.css134104515754120898 0
 97C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\@parcel\profiler\src\types.js134104521718582483 0
 102C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\tailwindcss\src\util\hashConfig.js134104515753964676 0
 88C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\tailwindcss\lib\util134104515753491551 1
@@ -2048,7 +2046,7 @@
 122C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\@parcel\runtime-browser-hmr\src\loaders\.eslintrc.json134104521740151075 0
 96C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\tailwindcss\src\value-parser134104515753964676 1
 107C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\tailwindcss\src\value-parser\index.d.ts134104515753964676 0
-83C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\dist\MelodyMate.4110e2cc.css134105953119115643 0
+83C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\dist\MelodyMate.4110e2cc.css134105996482889103 0
 94C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\node-releases\package.json134104521752777212 0
 105C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\tailwindcss\src\value-parser\index.js134104515753964676 0
 99C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\caniuse-lite\data\regions\IS.js134104521772392150 0
@@ -2121,8 +2119,8 @@
 88C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\lightningcss\LICENSE134104521692291678 0
 99C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\caniuse-lite\data\regions\DM.js134104521768139625 0
 103C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\tailwindcss\src\util\pluginUtils.js134104515753964676 0
-118C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\tailwindcss\lib\lib\normalizeTailwindDirectives.js134104515753179114 0
 106C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\tailwindcss\src\util\pseudoElements.js134104515753964676 0
+118C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\tailwindcss\lib\lib\normalizeTailwindDirectives.js134104515753179114 0
 109C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\tailwindcss\src\util\resolveConfigPath.js134104515753964676 0
 113C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\caniuse-lite\data\features\css-paged-media.js134104521765530920 0
 109C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\caniuse-lite\data\features\shadowdomv1.js134104521779117997 0
@@ -2177,7 +2175,7 @@
 107C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\tailwindcss\src\lib\findAtConfigPath.js134104515753808473 0
 112C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\tailwindcss\src\lib\getModuleDependencies.js134104515753808473 0
 129C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\caniuse-lite\data\features\cross-document-view-transitions.js134104521764296076 0
-70C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\dist\output.css134105943809833696 0
+70C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\dist\output.css134105995521865887 0
 108C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\foreground-child\dist\esm\index.d.ts.map134104515749730647 0
 108C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\caniuse-lite\data\features\ogg-vorbis.js134104521774648060 0
 102C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\tailwindcss\src\lib\load-config.ts134104515753808473 0
@@ -2226,6 +2224,7 @@
 107C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\@parcel\runtime-browser-hmr\src\loaders134104521740141106 1
 99C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\tailwindcss\lib\util\bigSign.js134104515753335328 0
 92C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\shebang-regex\index.d.ts134104515752081700 0
+79C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\dist\search.48936671.css134106004815730360 0
 107C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\tailwindcss\lib\util\buildMediaQuery.js134104515753335328 0
 97C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\tailwindcss\lib\util\color.js134104515753335328 0
 86C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\postcss-import\lib134104515751296715 1
@@ -2305,6 +2304,10 @@
 103C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\caniuse-lite\data\features\xhtml.js134104521781025269 0
 107C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\@swc\helpers\_\_iterable_to_array_limit134104521680059916 1
 116C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\tailwindcss\lib\lib\evaluateTailwindFunctions.js134104515753179114 0
+148C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\ordered-binary\.nyc_output\processinfo\5b6bd808-0399-4ee6-9395-344688761dfa.json134104521667240481 0
+99C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\caniuse-lite\data\regions\AT.js134104521758928482 0
+103C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\caniuse-lite\data\features\webgl.js134104521780713656 0
+98C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\tailwindcss\lib\lib\offsets.js134104515753179114 0
 112C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\tailwindcss\lib\lib\partitionApplyAtRules.js134104515753179114 0
 100C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\postcss-value-parser\lib\unit.js134104515751452927 0
 105C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\tailwindcss\lib\lib\remap-bitfield.js134104515753179114 0
@@ -2903,7 +2906,6 @@
 87C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\get-port\index.d.ts134104521744205727 0
 117C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\caniuse-lite\data\features\requestidlecallback.js134104521775764670 0
 88C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\resolve\package.json134104515751769246 0
-78C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\dist\search.c719088e.js134105940912105657 0
 108C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\node-gyp-build-optional-packages\LICENSE134104521672550360 0
 91C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\resolve\readme.markdown134104515751769246 0
 117C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\lmdb\dependencies\lmdb\libraries\liblmdb\mtest3.c134104521722880712 0
@@ -3048,7 +3050,6 @@
 89C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\readdirp\package.json134104515751769246 0
 86C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\read-cache\LICENSE134104515751769246 0
 85C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\glob\package.json134104515750043101 0
-122C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\msgpackr-extract\node_modules\detect-libc\package.json134104521755720947 0
 90C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\react-refresh\babel.js134104521675207049 0
 121C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\@parcel\core\test\fixtures\config-malformed\.parcelrc134104521753161656 0
 92C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\react-refresh\runtime.js134104521675286893 0
@@ -3372,6 +3373,7 @@
 118C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\@swc\helpers\esm\_iterable_to_array_limit_loose.js134104521678542161 0
 148C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\msgpackr-extract\node_modules\node-gyp-build-optional-packages\node-gyp-build.js134104521756881680 0
 117C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\msgpackr-extract\node_modules\detect-libc\LICENSE134104521755517314 0
+122C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\msgpackr-extract\node_modules\detect-libc\package.json134104521755720947 0
 119C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\msgpackr-extract\node_modules\detect-libc\README.md134104521755720947 0
 91C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\escalade\dist\index.mjs134104521754336770 0
 128C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\msgpackr-extract\node_modules\detect-libc\lib\detect-libc.js134104521755579778 0
@@ -3397,7 +3399,6 @@
 85C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\msgpackr\index.js134104521719051785 0
 90C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\msgpackr\node-index.js134104521719051785 0
 87C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\msgpackr\pack.d.cts134104521719051785 0
-78C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\dist\logo.7acf0475.jpeg134104526485045069 0
 111C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\@parcel\core\src\requests\PackageRequest.js134104521763380283 0
 86C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\msgpackr\pack.d.ts134104521732715636 0
 84C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\msgpackr\pack.js134104521719051785 0
@@ -3875,7 +3876,6 @@
 98C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\glob\dist\commonjs\walker.d.ts134104515750043101 0
 102C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\glob\dist\commonjs\walker.d.ts.map134104515750043101 0
 96C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\glob\dist\commonjs\walker.js134104515750043101 0
-78C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\dist\search.b070d9fb.js134105940912105657 0
 114C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\caniuse-lite\data\features\beforeafterprint.js134104521763014107 0
 84C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\get-port\license134104521744577894 0
 105C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\foreground-child\dist\esm\watchdog.js134104515749730647 0
@@ -3922,7 +3922,6 @@
 114C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\foreground-child\dist\esm\proxy-signals.js.map134104515749730647 0
 107C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\foreground-child\dist\esm\watchdog.d.ts134104515749730647 0
 111C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\foreground-child\dist\esm\watchdog.d.ts.map134104515749730647 0
-82C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\dist\search.b070d9fb.js.map134105940912499112 0
 109C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\caniuse-lite\data\features\svg-filters.js134104521779454834 0
 109C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\foreground-child\dist\esm\watchdog.js.map134104515749730647 0
 115C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\foreground-child\dist\commonjs\all-signals.d.ts134104515749730647 0
@@ -4502,10 +4501,12 @@
 110C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\caniuse-lite\data\features\css3-tabsize.js134104521766020154 0
 115C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\@parcel\core\test\fixtures\glob-like\[entry].js134104521753311514 0
 115C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\caniuse-lite\data\features\custom-elementsv1.js134104521766060057 0
+86C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\dist\MelodyMate.cc96e9ac.js.map134106006883208195 0
 106C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\caniuse-lite\data\features\datalist.js134104521767832807 0
 105C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\caniuse-lite\data\features\dataset.js134104521767852539 0
 105C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\caniuse-lite\data\features\datauri.js134104521767872494 0
 121C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\caniuse-lite\data\features\date-tolocaledatestring.js134104521767922472 0
+87C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\dist\MelodyMate.aa436662.css.map134105996552046610 0
 108C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\caniuse-lite\data\features\decorators.js134104521767952269 0
 114C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\caniuse-lite\data\features\devicepixelratio.js134104521767982187 0
 104C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\caniuse-lite\data\features\dnssec.js134104521768159222 0
@@ -4585,7 +4586,7 @@
 120C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\caniuse-lite\data\features\link-rel-modulepreload.js134104521772880614 0
 116C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\caniuse-lite\data\features\link-rel-prerender.js134104521772880614 0
 113C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\binary-extensions\binary-extensions.json.d.ts134104515746632805 0
-69C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\dist\src\pages134105953119115643 1
+69C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\dist\src\pages134106004814544891 1
 118C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\@parcel\core\test\fixtures\invalid-source-not-file134104521784047915 1
 115C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\caniuse-lite\data\features\loading-lazy-attr.js134104521773030680 0
 111C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\caniuse-lite\data\features\localecompare.js134104521773039333 0
@@ -4833,6 +4834,7 @@
 92C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\ansi-styles\package.json134104515746224277 0
 82C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\@parcel\plugin134104521727550926 1
 89C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\ansi-regex\index.d.ts134104515746224277 0
+78C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\dist\search.c3b8e774.js134106007263622954 0
 77C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\@swc\core134104521689617839 1
 80C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\@swc\counter134104521674383335 1
 110C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\@parcel\transformer-image\src\loadSharp.js134104521732715636 0
@@ -5136,7 +5138,6 @@
 95C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\@swc\helpers\esm\_update.js134104521678982724 0
 98C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\@swc\helpers\esm\_using_ctx.js134104521678992697 0
 116C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\@swc\helpers\cjs\_apply_decorated_descriptor.cjs134104521676542626 0
-86C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\dist\MelodyMate.3464ddca.js.map134105956649036574 0
 108C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\@swc\helpers\cjs\_async_to_generator.cjs134104521676876611 0
 109C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\@swc\helpers\cjs\_array_without_holes.cjs134104521676542626 0
 106C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\@swc\helpers\cjs\_array_with_holes.cjs134104521676542626 0
@@ -5430,6 +5431,7 @@
 115C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\@parcel\transformer-posthtml\src\loadPlugins.js134104521729541074 0
 92C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\@parcel\packager-css\src134104521739855523 1
 123C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\@parcel\transformer-posthtml\src\PostHTMLTransformer.js134104521729557652 0
+85C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\dist\navbar-loader.1b626801.js134106006883042162 0
 99C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\@parcel\transformer-postcss\lib134104521727560883 1
 108C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\@parcel\transformer-postcss\package.json134104521727754235 0
 99C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\@parcel\transformer-postcss\src134104521727620708 1
@@ -5689,6 +5691,7 @@
 111C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\@parcel\markdown-ansi\test\markdown-ansi.js134104521677882960 0
 90C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\@parcel\logger\LICENSE134104521748432063 0
 86C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\@parcel\logger\src134104521748541870 1
+83C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\dist\search.48936671.css.map134106004815749800 0
 87C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\@parcel\logger\test134104521748581832 1
 96C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\@parcel\logger\src\Logger.js134104521748561888 0
 96C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\@parcel\logger\lib\Logger.js134104521748432063 0
@@ -5740,7 +5743,7 @@
 114C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\@parcel\error-overlay\src\utils\stack-frame.js134104521676542626 0
 85C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\.bin\autoprefixer134104515745633977 0
 119C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\@parcel\error-overlay\src\components\CloseButton.js134104521674383335 0
-70C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\dist\index.html134105953119115643 0
+70C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\dist\index.html134106004814544891 0
 117C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\@parcel\error-overlay\src\components\CodeBlock.js134104521674550007 0
 119C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\@parcel\error-overlay\src\components\Collapsible.js134104521674559974 0
 120C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\@parcel\error-overlay\src\components\ErrorOverlay.js134104521674579900 0
@@ -5989,7 +5992,6 @@
 104C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\@jridgewell\gen-mapping\package.json134104515745724934 0
 112C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\@jridgewell\gen-mapping\dist\gen-mapping.mjs134104515745724934 0
 116C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\@jridgewell\gen-mapping\dist\gen-mapping.mjs.map134104515745724934 0
-119C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\@jridgewell\gen-mapping\dist\gen-mapping.umd.js.map134104515745724934 0
 102C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\@jridgewell\gen-mapping\dist\types134104515745724934 1
 119C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\@jridgewell\gen-mapping\dist\types\gen-mapping.d.ts134104515745724934 0
 81C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\@isaacs\cliui134104515745724934 1
@@ -6039,13 +6041,12 @@
 99C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\.bin\update-browserslist-db.ps1134104522162067427 0
 81C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\.bin\yaml.cmd134104515745724934 0
 81C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\node_modules\.bin\yaml.ps1134104515745724934 0
-82C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\dist\Designer.80b8b26c.jpeg134104526485045069 0
-88C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\dist\karaoke-data.4457fe3a.js.map134105956649046523 0
-82C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\dist\MelodyMate.88db5c57.js134105940912105657 0
-86C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\dist\MelodyMate.88db5c57.js.map134105940912520601 0
-78C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\dist\search.51668d69.js134105956649449578 0
-82C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\dist\search.51668d69.js.map134105956649529352 0
-78C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\dist\search.febd1ee4.js134105956648722000 0
-82C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\dist\search.febd1ee4.js.map134105956649036574 0
-63C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\dist\src134104526484888770 1
-81C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\dist\src\pages\search.html134105953119115643 0
+88C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\dist\karaoke-data.7e6b71c1.js.map134106006883603376 0
+83C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\dist\MelodyMate.aa436662.css134105996551993489 0
+82C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\dist\MelodyMate.cc96e9ac.js134106006883029660 0
+89C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\dist\navbar-loader.1b626801.js.map134106006883208195 0
+82C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\dist\search.c3b8e774.js.map134106007263662852 0
+63C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\dist\src134105996418880567 1
+77C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\dist\utils.714af2d8.js134106006883042162 0
+81C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\dist\utils.714af2d8.js.map134106006883208195 0
+81C:\Users\Admin\Documents\Wunders149\Project\MelodyMate\dist\src\pages\search.html134106004814382702 0

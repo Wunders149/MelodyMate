@@ -720,7 +720,7 @@ parcelHelpers.export(exports, "loadNavBar", ()=>loadNavBar);
 var _utilsJs = require("./utils.js");
 async function loadNavBar() {
     try {
-        await (0, _utilsJs.chargerPage)('./src/pages/navbar.html', 'navBar');
+        await (0, _utilsJs.chargerPage)('../pages/navbar.html', 'navBar');
     } catch (error) {
         console.error('Failed to load navbar:', error);
     }
