@@ -367,7 +367,7 @@ document.addEventListener('DOMContentLoaded', async function() {
       </div>
 
       <!-- Lyrics Display -->
-      <div id="lyricsDisplay" class="bg-gradient-to-b from-purple-50 to-pink-50 rounded-xl p-8 min-h-96 flex flex-col justify-center space-y-2 hidden">
+      <div id="lyricsDisplay" class="bg-gradient-to-b from-purple-50 to-pink-50 rounded-xl p-8 min-h-96 flex-col justify-center space-y-2 hidden">
         <div class="text-center text-gray-500">
           <i class="fas fa-music text-4xl mb-4"></i>
           <p>Search for a song above to start your karaoke session!</p>
