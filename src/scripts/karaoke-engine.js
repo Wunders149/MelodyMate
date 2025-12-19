@@ -497,7 +497,7 @@ document.addEventListener('DOMContentLoaded', async function() {
           return;
         }
 
-        displaySearchResults(results, karaoke, isSearchPage);
+          displaySearchResults(results, karaoke, isSearchPage, searchResults);
         searchResults.classList.remove('hidden');
       } catch (error) {
         console.error('Search error:', error);
@@ -582,60 +582,9 @@ document.addEventListener('DOMContentLoaded', async function() {
         showNotification(`${e.target.value} effect not implemented yet`, 'info');
       });
     }
-
-    // Search functionality for lyrics.html
-    const searchBtn = document.getElementById('searchBtn');
-    const songSearch = document.getElementById('songSearch');
-    const artistSearch = document.getElementById('artistSearch');
-    const searchResults = document.getElementById('searchResults');
-
-    if (searchBtn && songSearch && artistSearch && searchResults) {
-      searchBtn.addEventListener('click', async () => {
-        const songQuery = songSearch.value.trim();
-        const artistQuery = artistSearch.value.trim();
-
-        if (!songQuery) {
-          showNotification('Please enter a song title', 'error');
-          return;
-        }
-
-        searchBtn.disabled = true;
-        searchBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-3"></i>Searching...';
-
-        try {
-          const results = await karaokeAPI.searchSongs(songQuery, artistQuery);
-
-          if (results.length === 0) {
-            searchResults.innerHTML = '<p class="text-gray-500 text-center py-4">No songs found. Try different search terms.</p>';
-            searchResults.classList.remove('hidden');
-            return;
-          }
-
-          displaySearchResults(results, karaoke, isSearchPage);
-          searchResults.classList.remove('hidden');
-        } catch (error) {
-          console.error('Search error:', error);
-          showNotification('Search failed. Please try again.', 'error');
-        } finally {
-          searchBtn.disabled = false;
-          searchBtn.innerHTML = '<i class="fas fa-search mr-3"></i>Search';
-        }
-      });
-
-      // Allow Enter key to search
-      [songSearch, artistSearch].forEach(input => {
-        input.addEventListener('keypress', (e) => {
-          if (e.key === 'Enter') {
-            searchBtn.click();
-          }
-        });
-      });
-    } else {
-      console.warn('Search elements not found on lyrics page');
-    }
   }
 
-  function displaySearchResults(results, karaoke, isSearchPage) {
+  function displaySearchResults(results, karaoke, isSearchPage, searchResults) {
     searchResults.innerHTML = '';
 
     results.forEach(song => {

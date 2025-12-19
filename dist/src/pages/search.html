@@ -1,102 +1,65 @@
-<!DOCTYPE html><html lang="en"><head><script type="importmap">{"imports":{"byvEW":"/navbar-loader.1b626801.js","gOek3":"/utils.714af2d8.js","k9m1z":"/karaoke-data.7e6b71c1.js"}}</script><link rel="stylesheet" href="/search.48936671.css"><script type="module" src="/utils.714af2d8.js"></script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Karaoke - MelodyMate</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-</head>
-<body class="bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50 min-h-screen">
-    <div id="navBar"></div>
+<!DOCTYPE html><html lang=en><script type=importmap>{"imports":{"9PQfj":"/utils.5ffc394c.js","axIYR":"/navbar-loader.cee7af58.js","jyK6J":"/karaoke-data.f94743e7.js"}}</script><link rel=stylesheet href=/search.6ee10da1.css><script type=module src=/navbar-loader.cee7af58.js></script><script type=module src=/utils.5ffc394c.js></script><meta charset=UTF-8><meta name=viewport content="width=device-width, initial-scale=1.0"><title>Search - MelodyMate</title><link href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css rel=stylesheet><body class="bg-gradient-to-br from-purple-50 min-h-screen to-blue-50 via-pink-50">
+    <div id=navBar></div>
 
-    <!-- Hero Section -->
-    <div class="relative overflow-hidden pt-16">
-        <div class="absolute inset-0 bg-gradient-to-r from-purple-400/20 to-pink-400/20"></div>
-        <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-16">
-            <div class="text-center animate-fade-in-up">
-                <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full mb-8 shadow-lg animate-pulse-glow">
-                    <i class="fas fa-microphone text-white text-3xl"></i>
+    <div class="container mx-auto p-8 pt-16">
+        <div class="max-w-4xl mx-auto">
+            
+            <div class="mb-8 text-center">
+                <div class="animate-pulse-glow bg-gradient-to-r from-pink-500 h-20 inline-flex items-center justify-center mb-6 rounded-full shadow-lg to-purple-600 w-20">
+                    <i class="fa-search fas text-3xl text-white"></i>
                 </div>
-                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-                    <span class="bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent">
-                        Karaoke
-                    </span> Time!
+                <h1 class="bg-clip-text bg-gradient-to-r font-bold from-pink-500 mb-4 text-4xl text-transparent to-purple-600">
+                    Find Your Karaoke Song
                 </h1>
-                <p class="text-xl text-gray-600 mb-12 max-w-2xl mx-auto">
-                    Sing your heart out with interactive lyrics and instrumental tracks. Choose from our collection of karaoke songs!
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                    <div class="text-purple-600 font-semibold">
-                        <i class="fas fa-arrow-down mr-2 animate-bounce"></i>
-                        Scroll down to start singing!
-                    </div>
-                </div>
+                <p class="text-gray-600 text-xl">Search by title, artist, or genre to discover your next hit!</p>
             </div>
-        </div>
 
-        <!-- Floating Microphone Animation -->
-        <div class="absolute top-20 left-10 animate-float">
-            <i class="fas fa-microphone text-pink-400 text-2xl opacity-60"></i>
-        </div>
-        <div class="absolute top-40 right-20 animate-float" style="animation-delay: 1s">
-            <i class="fas fa-music text-purple-400 text-xl opacity-60"></i>
-        </div>
-        <div class="absolute bottom-20 left-20 animate-float" style="animation-delay: 2s">
-            <i class="fas fa-volume-up text-blue-400 text-lg opacity-60"></i>
-        </div>
-    </div>
+            
+            <div class="bg-white border border-gray-100 mb-8 p-8 rounded-3xl shadow-2xl">
+                <div class="mb-6 text-center">
+                    <h2 class="bg-clip-text bg-gradient-to-r font-bold from-pink-500 mb-2 text-3xl text-transparent to-purple-600">
+                        Start Your Karaoke Journey
+                    </h2>
+                    <p class=text-gray-600>Enter song details below:</p>
+                </div>
 
-    <!-- Karaoke Instructions -->
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
-        <div class="bg-white rounded-2xl shadow-xl p-6">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-                <div class="p-4">
-                    <div class="w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-3">
-                        <i class="fas fa-search text-white"></i>
+                <div class="flex flex-col gap-4 lg:flex-row mb-6">
+                    <div class="flex-1 relative">
+                        <i class="-translate-y-1/2 absolute fa-music fas left-4 text-gray-400 top-1/2 transform"></i>
+                        <input id=songSearch placeholder="Enter song title..." class="border-2 border-gray-200 duration-300 focus:border-purple-500 focus:ring-4 focus:ring-purple-200 pl-12 pr-4 py-4 rounded-2xl text-lg transition-all w-full">
                     </div>
-                    <h3 class="font-semibold text-gray-900 mb-2">Search Songs</h3>
-                    <p class="text-sm text-gray-600">Find any song with synchronized lyrics</p>
-                </div>
-                <div class="p-4">
-                    <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-3">
-                        <i class="fas fa-clock text-white"></i>
+                    <div class="flex-1 relative">
+                        <i class="-translate-y-1/2 absolute fa-user fas left-4 text-gray-400 top-1/2 transform"></i>
+                        <input id=artistSearch placeholder="Enter artist name (optional)..." class="border-2 border-gray-200 duration-300 focus:border-purple-500 focus:ring-4 focus:ring-purple-200 pl-12 pr-4 py-4 rounded-2xl text-lg transition-all w-full">
                     </div>
-                    <h3 class="font-semibold text-gray-900 mb-2">Timestamped Lyrics</h3>
-                    <p class="text-sm text-gray-600">Lyrics sync perfectly with the music</p>
+                    <button id=searchBtn class="bg-gradient-to-r duration-300 flex font-bold from-pink-500 hover:scale-105 hover:shadow-xl items-center px-8 py-4 rounded-2xl shadow-lg text-lg text-white to-purple-600 transform transition-all">
+                        <i class="fa-search fas mr-3"></i>Search
+                    </button>
                 </div>
-                <div class="p-4">
-                    <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-3">
-                        <i class="fas fa-microphone text-white"></i>
-                    </div>
-                    <h3 class="font-semibold text-gray-900 mb-2">Sing Along</h3>
-                    <p class="text-sm text-gray-600">Follow the highlighted lyrics</p>
+
+                
+                <div class="flex flex-wrap gap-3 mb-6">
+                    <button class="bg-gray-100 duration-200 font-medium hover:bg-purple-100 hover:text-purple-700 px-4 py-2 rounded-full text-gray-700 transition-colors">
+                        <i class="fa-fire fas mr-2"></i>Popular
+                    </button>
+                    <button class="bg-gray-100 duration-200 font-medium hover:bg-pink-100 hover:text-pink-700 px-4 py-2 rounded-full text-gray-700 transition-colors">
+                        <i class="fa-heart fas mr-2"></i>Romance
+                    </button>
+                    <button class="bg-gray-100 duration-200 font-medium hover:bg-blue-100 hover:text-blue-700 px-4 py-2 rounded-full text-gray-700 transition-colors">
+                        <i class="fa-star fas mr-2"></i>Classic
+                    </button>
+                    <button class="bg-gray-100 duration-200 font-medium hover:bg-green-100 hover:text-green-700 px-4 py-2 rounded-full text-gray-700 transition-colors">
+                        <i class="fa-music fas mr-2"></i>Pop
+                    </button>
                 </div>
+
+                <div id=searchResults class="bg-gray-50 border border-gray-200 hidden max-h-80 overflow-y-auto p-4 rounded-2xl space-y-3"></div>
             </div>
         </div>
     </div>
 
-    <!-- Karaoke Interface will be inserted here by JavaScript -->
+    <div id=footer></div>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-8 mt-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div class="flex justify-center space-x-6 mb-4">
-                <div class="flex items-center">
-                    <i class="fas fa-keyboard mr-2 text-pink-400"></i>
-                    <span class="text-sm">Space: Play/Pause</span>
-                </div>
-                <div class="flex items-center">
-                    <i class="fas fa-arrows-alt-h mr-2 text-purple-400"></i>
-                    <span class="text-sm">Arrows: Seek</span>
-                </div>
-                <div class="flex items-center">
-                    <i class="fas fa-mouse-pointer mr-2 text-blue-400"></i>
-                    <span class="text-sm">Click lyrics to jump</span>
-                </div>
-            </div>
-            <p class="text-gray-400">© 2025 MelodyMate Karaoke. Sing your heart out! 🎤</p>
-        </div>
-    </footer>
+    <script type=module src=/search.b28742d9.js></script>
+    <script type=module>import"./navbar-loader.cee7af58.js";import"./utils.5ffc394c.js";var e=globalThis,r={},o={},t=e.parcelRequireb585;null==t&&((t=function(e){if(e in r)return r[e].exports;if(e in o){var t=o[e];delete o[e];var a={id:e,exports:{}};return r[e]=a,t.call(a.exports,a,a.exports),a.exports}var n=Error("Cannot find module '"+e+"'");throw n.code="MODULE_NOT_FOUND",n}).register=function(e,r){o[e]=r},e.parcelRequireb585=t),(0,t.register)("6DHNg",function(e,r){Object.defineProperty(e.exports,"loadFooter",{get:()=>a,set:void 0,enumerable:!0,configurable:!0});var o=t("h8sKa");async function a(){try{await (0,o.chargerPage)("../pages/footer.html","footer")}catch(e){console.error("Failed to load footer:",e)}}});var a=t("beBBR"),n=t("6DHNg");document.addEventListener("DOMContentLoaded",()=>{(0,a.loadNavBar)(),(0,n.loadFooter)()});</script>
 
-    <script type="module" src="/MelodyMate.cc96e9ac.js"></script>
-    <script type="module" src="/search.c3b8e774.js"></script>
-
-</body></html>

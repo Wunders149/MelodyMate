@@ -1,10 +1,4 @@
-import '../styles/tailwind.css';
-import { chargerPage } from './utils.js';
-
-document.addEventListener('DOMContentLoaded', async function() {
-    try {
-        await chargerPage('../pages/navbar.html', 'navBar');
-    } catch (error) {
-        console.error('Failed to load navbar:', error);
-    }
-});
+// This file is intentionally left blank as its previous functionality
+// for loading the navbar and footer has been moved to direct HTML injection
+// and dedicated loader scripts (navbar-loader.js, footer-loader.js).
+// No global application-specific logic is currently defined here.

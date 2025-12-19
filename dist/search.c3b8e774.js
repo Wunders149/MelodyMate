@@ -1128,8 +1128,8 @@ document.addEventListener('DOMContentLoaded', async function() {
         const searchBtn = document.getElementById('searchBtn');
         const songSearch = document.getElementById('songSearch');
         const artistSearch = document.getElementById('artistSearch');
-        const searchResults1 = document.getElementById('searchResults');
-        if (searchBtn && songSearch && artistSearch && searchResults1) {
+        const searchResults = document.getElementById('searchResults');
+        if (searchBtn && songSearch && artistSearch && searchResults) {
             searchBtn.addEventListener('click', async ()=>{
                 const songQuery = songSearch.value.trim();
                 const artistQuery = artistSearch.value.trim();
@@ -1142,12 +1142,12 @@ document.addEventListener('DOMContentLoaded', async function() {
                 try {
                     const results = await karaokeAPI.searchSongs(songQuery, artistQuery);
                     if (results.length === 0) {
-                        searchResults1.innerHTML = '<p class="text-gray-500 text-center py-4">No songs found. Try different search terms.</p>';
-                        searchResults1.classList.remove('hidden');
+                        searchResults.innerHTML = '<p class="text-gray-500 text-center py-4">No songs found. Try different search terms.</p>';
+                        searchResults.classList.remove('hidden');
                         return;
                     }
-                    displaySearchResults(results, karaoke, isSearchPage);
-                    searchResults1.classList.remove('hidden');
+                    displaySearchResults(results, karaoke, isSearchPage, searchResults);
+                    searchResults.classList.remove('hidden');
                 } catch (error) {
                     console.error('Search error:', error);
                     showNotification('Search failed. Please try again.', 'error');
@@ -1208,50 +1208,8 @@ document.addEventListener('DOMContentLoaded', async function() {
             // For now, just show a notification
             showNotification(`${e.target.value} effect not implemented yet`, 'info');
         });
-        // Search functionality for lyrics.html
-        const searchBtn = document.getElementById('searchBtn');
-        const songSearch = document.getElementById('songSearch');
-        const artistSearch = document.getElementById('artistSearch');
-        const searchResults1 = document.getElementById('searchResults');
-        if (searchBtn && songSearch && artistSearch && searchResults1) {
-            searchBtn.addEventListener('click', async ()=>{
-                const songQuery = songSearch.value.trim();
-                const artistQuery = artistSearch.value.trim();
-                if (!songQuery) {
-                    showNotification('Please enter a song title', 'error');
-                    return;
-                }
-                searchBtn.disabled = true;
-                searchBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-3"></i>Searching...';
-                try {
-                    const results = await karaokeAPI.searchSongs(songQuery, artistQuery);
-                    if (results.length === 0) {
-                        searchResults1.innerHTML = '<p class="text-gray-500 text-center py-4">No songs found. Try different search terms.</p>';
-                        searchResults1.classList.remove('hidden');
-                        return;
-                    }
-                    displaySearchResults(results, karaoke, isSearchPage);
-                    searchResults1.classList.remove('hidden');
-                } catch (error) {
-                    console.error('Search error:', error);
-                    showNotification('Search failed. Please try again.', 'error');
-                } finally{
-                    searchBtn.disabled = false;
-                    searchBtn.innerHTML = '<i class="fas fa-search mr-3"></i>Search';
-                }
-            });
-            // Allow Enter key to search
-            [
-                songSearch,
-                artistSearch
-            ].forEach((input)=>{
-                input.addEventListener('keypress', (e)=>{
-                    if (e.key === 'Enter') searchBtn.click();
-                });
-            });
-        } else console.warn('Search elements not found on lyrics page');
     }
-    function displaySearchResults(results, karaoke, isSearchPage) {
+    function displaySearchResults(results, karaoke, isSearchPage, searchResults) {
         searchResults.innerHTML = '';
         results.forEach((song)=>{
             const resultItem = document.createElement('div');
@@ -1349,18 +1307,18 @@ document.addEventListener('DOMContentLoaded', async function() {
     document.head.appendChild(style);
 });
 
-},{"566758b50efe1b67":"dOAsH","d3afdc61827a6":"Nhj45","d9066969bdbf4adc":"hVWaJ","../styles/tailwind.css":"9KtUr"}],"dOAsH":[function(require,module,exports,__globalThis) {
-module.exports = Promise.all([
-    import("./utils.714af2d8.js"),
-    import("./navbar-loader.1b626801.js")
-]).then(()=>module.bundle.root('8gcSL'));
-
-},{"8gcSL":"8gcSL"}],"Nhj45":[function(require,module,exports,__globalThis) {
+},{"d3afdc61827a6":"Nhj45","d9066969bdbf4adc":"hVWaJ","../styles/tailwind.css":"9KtUr","566758b50efe1b67":"dOAsH"}],"Nhj45":[function(require,module,exports,__globalThis) {
 module.exports = import("./karaoke-data.7e6b71c1.js").then(()=>module.bundle.root('3EPtN'));
 
 },{"3EPtN":"3EPtN"}],"hVWaJ":[function(require,module,exports,__globalThis) {
 module.exports = import("./utils.714af2d8.js").then(()=>module.bundle.root('1X9hu'));
 
-},{"1X9hu":"1X9hu"}],"9KtUr":[function() {},{}]},["ckN9Z","cNjRp"], "cNjRp", "parcelRequireb585", {})
+},{"1X9hu":"1X9hu"}],"9KtUr":[function() {},{}],"dOAsH":[function(require,module,exports,__globalThis) {
+module.exports = Promise.all([
+    import("./utils.714af2d8.js"),
+    import("./navbar-loader.1b626801.js")
+]).then(()=>module.bundle.root('8gcSL'));
+
+},{"8gcSL":"8gcSL"}]},["ckN9Z","cNjRp"], "cNjRp", "parcelRequireb585", {})
 
 //# sourceMappingURL=search.c3b8e774.js.map

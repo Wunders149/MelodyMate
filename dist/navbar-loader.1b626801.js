@@ -726,6 +726,6 @@ async function loadNavBar() {
     }
 }
 
-},{"./utils.js":"1X9hu","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}]},["cf8Qw"], null, "parcelRequireb585", {})
+},{"./utils.js":"1X9hu","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}]},["cf8Qw","8gcSL"], "8gcSL", "parcelRequireb585", {})
 
 //# sourceMappingURL=navbar-loader.1b626801.js.map
